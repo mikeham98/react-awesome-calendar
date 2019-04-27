@@ -227,18 +227,18 @@
       <option name="presentableId" value="Default" />
       <updated>1556371133946</updated>
       <workItem from="1556371137272" duration="10956000" />
-      <workItem from="1556385342223" duration="2824000" />
+      <workItem from="1556385342223" duration="2851000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13780000" />
+    <option name="totallyTimeSpent" value="13807000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="593" y="28" width="720" height="826" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49838188" visible="true" weight="0.26037195" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49838188" visible="true" weight="0.26037195" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
@@ -246,7 +246,7 @@
       <window_info anchor="bottom" id="Run" order="2" weight="0.32692307" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32921812" />
       <window_info id="Structure" order="1" sideWeight="0.50161815" side_tool="true" weight="0.5053111" />
-      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.15226337" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.15226337" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
