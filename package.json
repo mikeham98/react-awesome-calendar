@@ -1,5 +1,5 @@
 {
-  "name": "react-sudoku",
+  "name": "react-calendar",
   "version": "0.0.1",
   "scripts": {
     "start": "webpack-dev-server --mode development --open --watch",
