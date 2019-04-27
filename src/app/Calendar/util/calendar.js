@@ -18,7 +18,6 @@ const getStartOfCalendar = (date) => {
 const getEndOfCalendar = (date) => {
     let originalEndDate = new Date(date.getTime());
     let actualEndDate = new Date(date.getTime());
-    console.log('originalEndDate',originalEndDate);
 
     if (originalEndDate !== 7 - 1 - firstDayOfWeek) {
         actualEndDate.setDate(originalEndDate.getDate() - originalEndDate.getDay() + lastDayOfWeek);
@@ -35,8 +34,6 @@ export const getCalendar = (month, year) => {
 
     let dayDifference = returnDifferenceInDaysBetweenTwoDate(actualStartDate, actualEndDate);
 
-    console.log('dayDifference',dayDifference);
-    console.log('actualEndDate',actualEndDate);
     let calendar = [];
 
     for (let x = 0; x < dayDifference / 7; x++) {
@@ -51,7 +48,6 @@ export const getCalendar = (month, year) => {
         }
         calendar.push(week);
     }
-    console.log('calendar',calendar);
     return calendar;
 };
 
