@@ -9,8 +9,7 @@ class Calendar extends React.Component {
         super(props);
         const currentDate = new Date();
         this.state = {
-            month: 7,
-            // month: currentDate.getMonth(),
+            month: currentDate.getMonth(),
             year: currentDate.getFullYear()
         };
         this.onClickPrev = this.onClickPrev.bind(this);
