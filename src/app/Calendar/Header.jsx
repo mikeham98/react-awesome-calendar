@@ -1,8 +1,27 @@
 import React from 'react';
 import {getMonthName} from "./util/calendar";
-import styles from './index.scss';
+import styles from './Monthly/index.scss';
 
 export default class Header extends React.PureComponent {
+    returnTitle() {
+        if(this.props.mode === 'yearMode') {
+            return (
+                <React.Fragment>
+                    <span className={styles.thickText}>{this.props.year}</span>
+                </React.Fragment>
+            );
+        }
+        if(this.props.mode === 'monthMode') {
+            return (
+                <React.Fragment>
+                    <span className={styles.thickText}>{getMonthName(this.props.month)}</span>
+                    &nbsp;
+                    <span className={styles.thinText}>{this.props.year}</span>
+                </React.Fragment>
+            );
+        }
+    }
+
     render() {
         return (
             <div className={styles.calendarHeader}>
@@ -10,21 +29,10 @@ export default class Header extends React.PureComponent {
                     <button onClick={this.props.onClickPrev}>prev</button>
                     <div>
                         <h1>
-                            <span className={styles.monthText}>{getMonthName(this.props.month)}</span>
-                            &nbsp;
-                            <span className={styles.yearText}>{this.props.year}</span>
+                            {this.returnTitle()}
                         </h1>
                     </div>
                     <button onClick={this.props.onClickNext}>next</button>
-                </div>
-                <div className={styles.calendarDayOfWeek}>
-                    <div>Sun</div>
-                    <div>Mon</div>
-                    <div>Tue</div>
-                    <div>Wed</div>
-                    <div>Thu</div>
-                    <div>Fri</div>
-                    <div>Sat</div>
                 </div>
             </div>
         );

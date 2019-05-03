@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './index.scss';
+import styles from './Week.styles.scss';
 import Day from "./Day";
 
 export default class Week extends React.PureComponent {
@@ -13,6 +13,7 @@ export default class Week extends React.PureComponent {
             }
         }
     }
+
     returnWeeks(week) {
         if (Array.isArray(week) && week.length) {
             return week.map((day, i) => {
@@ -21,6 +22,8 @@ export default class Week extends React.PureComponent {
                         key={i}
                         date={day.date}
                         current={day.current}
+                        events={day.events}
+                        onClickEvent={this.props.onClickEvent}
                         onClickDay={() => this.onClickDay(day)}
                     />
                 );

@@ -1,0 +1,50 @@
+.yearlyMonthRow {
+  float: left;
+  display: inline-block;
+  margin: 20px;
+  .weekRow {
+    height: 30px;
+  }
+  .calendarDayOfWeek {
+    div {
+      text-align: center;
+    }
+  }
+  .dayDate.inactiveDay.currentDay {
+    color: #b5b5b5;
+    display: unset;
+    border-radius: unset;
+    background-color: transparent;
+  }
+  .dayCell {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    position: relative;
+    .dayDate {
+      font-size: 0.8em;
+      display: inline-block;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      transform: translate(-50%, -50%);
+      top: 50%;
+      left: 50%;
+      span {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+    .dayDate.currentDay {
+      width: 50%;
+      height: 50%;
+    }
+  }
+}
+
+.calendarWrapper {
+  width: 100%;
+  color: #202029;
+}
