@@ -1,4 +1,5 @@
 import {startPosition, middlePosition, endPosition} from "../constants";
+import {getDate} from "./date";
 
 let firstDayOfWeek = 0;
 let lastDayOfWeek = 6;
@@ -60,14 +61,17 @@ export const formatEvents = (events) => {
     events.forEach(event => {
         const from = new Date(event.from);
         const to = new Date(event.to);
-        const fromDateOnly = new Date(from.getFullYear(), from.getMonth(), from.getDate());
-        const toDateOnly = new Date(to.getFullYear(), to.getMonth(), to.getDate());
+        const fromDate = getDate(from);
+        const toDate = getDate(to);
+        const fromDateAsTime = fromDate.getTime();
+        const toDateAsTime = toDate.getTime();
 
-        if (fromDateOnly.getTime() === toDateOnly.getTime()) {
-            if (!Array.isArray(formattedEvents[fromDateOnly.getTime()])) {
-                formattedEvents[fromDateOnly.getTime()] = [];
+        // if the from date is the same as the to date
+        if (fromDateAsTime === toDateAsTime) {
+            if (!Array.isArray(formattedEvents[fromDateAsTime])) {
+                formattedEvents[fromDateAsTime] = [];
             }
-            formattedEvents[fromDateOnly.getTime()].push({
+            formattedEvents[fromDateAsTime].push({
                 ...event,
                 date: from,
                 from,
@@ -75,9 +79,13 @@ export const formatEvents = (events) => {
             });
         } else {
             const daySpan = dateDiff(from, to);
+
+            // loop over each day between the from - to date
             for (let x = 0; x < daySpan; x++) {
-                const date = new Date(fromDateOnly.getTime());
-                date.setDate(fromDateOnly.getDate() + x);
+                const dateIteration = new Date(fromDateAsTime);
+                dateIteration.setDate(fromDate.getDate() + x);
+
+                // work out whether the event is positioned first, middle or last
                 let position;
                 if (x === 0) {
                     position = startPosition;
@@ -87,24 +95,24 @@ export const formatEvents = (events) => {
                     position = endPosition
                 }
 
-                const dateTime = date.getTime();
+                const dateTime = dateIteration.getTime();
                 if (!Array.isArray(formattedEvents[dateTime])) {
                     formattedEvents[dateTime] = [];
                 }
                 formattedEvents[dateTime].push({
                     ...event,
-                    date,
+                    date: dateIteration,
                     position
                 });
             }
         }
     });
 
+    // sort each event by date time
     Object.keys(formattedEvents).forEach(date => {
         formattedEvents[date] = formattedEvents[date].sort((a,b) =>  new Date(a.from) - new Date(b.from));
     });
 
-    console.log('formattedEvents',formattedEvents);
     return formattedEvents;
 };
 
@@ -131,11 +139,4 @@ export const getEventsForCalendar = (events, calendar) => {
 export const getMonthName = (month) => {
     const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
     return months[month];
-};
-
-export const prevCalendar = () => {
-
-};
-export const nextCalendar = () => {
-
 };

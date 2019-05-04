@@ -5,7 +5,7 @@ import styles from './Event.styles.scss';
 
 export default class Event extends React.PureComponent {
 
-    returnEventsClassname(position) {
+    returnEventsClassName(position) {
         const {inactive} = this.props;
         const className = [styles.dayCellEvent];
         if (position) {
@@ -44,7 +44,7 @@ export default class Event extends React.PureComponent {
         return (
             <div
                 style={{backgroundColor: color, height}}
-                className={this.returnEventsClassname(position)}
+                className={this.returnEventsClassName(position)}
                 onClick={this.props.onClick}
             >
                 {this.returnEventName(title, position)}

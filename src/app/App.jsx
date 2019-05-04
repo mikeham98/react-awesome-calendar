@@ -10,24 +10,24 @@ const events = [{
     title: 'This is a long event'
 }, {
     id: 2,
-    color: '#8281fd',
+    color: '#1ccb9e',
     from: '2019-05-01T13:00:00+00:00',
     to: '2019-05-05T14:00:00+00:00',
     title: 'This is another title'
 }, {
-    id: 4,
+    id: 3,
     color: '#fd3153',
     from: '2019-05-01T13:00:00+00:00',
     to: '2019-05-05T14:00:00+00:00',
     title: 'This is another title'
 }, {
-    id: 5,
+    id: 4,
     color: 'green',
     from: '2019-05-03T17:00:00+00:00',
     to: '2019-05-03T19:00:00+00:00',
     title: 'This is another title'
 }, {
-    id: 3,
+    id: 5,
     color: '#8281fd',
     from: '2019-06-01T09:00:00+00:00',
     to: '2019-06-01T10:00:00+00:00',

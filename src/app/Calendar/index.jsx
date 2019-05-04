@@ -5,6 +5,7 @@ import Monthly from "./Monthly";
 import Yearly from "./Yearly";
 import Daily from "./Daily";
 import {yearMode, monthMode, dayMode} from './constants/index'
+import Mode from "./Mode";
 
 class Calendar extends React.PureComponent {
     constructor(props) {
@@ -15,9 +16,7 @@ class Calendar extends React.PureComponent {
             month:  currentDate.getMonth(),
             year: currentDate.getFullYear()
         };
-        this.onClickYearMode = this.onClickYearMode.bind(this);
-        this.onClickMonthMode = this.onClickMonthMode.bind(this);
-        this.onClickDayMode = this.onClickDayMode.bind(this);
+        this.onClickMode = this.onClickMode.bind(this);
         this.onClickPrev = this.onClickPrev.bind(this);
         this.onClickNext = this.onClickNext.bind(this);
         this.onClickMonth = this.onClickMonth.bind(this);
@@ -109,21 +108,9 @@ class Calendar extends React.PureComponent {
         });
     }
 
-    onClickYearMode() {
+    onClickMode(mode) {
         this.setState({
-            mode: yearMode
-        });
-    }
-
-    onClickMonthMode() {
-        this.setState({
-            mode: monthMode
-        });
-    }
-
-    onClickDayMode() {
-        this.setState({
-            mode: dayMode
+            mode
         });
     }
 
@@ -148,9 +135,9 @@ class Calendar extends React.PureComponent {
     render() {
         return (
             <div className={styles.calendarWrapper}>
-                <button onClick={this.onClickYearMode}>year</button>
-                <button onClick={this.onClickMonthMode}>month</button>
-                <button onClick={this.onClickDayMode}>day</button>
+                <Mode
+                    onClick={this.onClickMode}
+                />
                 {this.returnHeader()}
                 {this.returnCalendar()}
             </div>

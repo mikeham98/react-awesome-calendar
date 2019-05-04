@@ -3,6 +3,7 @@ import styles from './Day.styles.scss';
 import classnames from "classnames";
 import Event from "./Event";
 import {getElementHeight} from "../util/getElementHeight";
+import {getDate} from "../util/date";
 
 export default class Day extends React.PureComponent {
     constructor(props) {
@@ -12,12 +13,17 @@ export default class Day extends React.PureComponent {
         };
     }
 
+    componentDidMount() {
+        this.shouldShowRemainder();
+    }
+
+    componentDidUpdate() {
+        this.shouldShowRemainder();
+    }
+
     isCurrentDate() {
         const date = this.props.date.getTime();
-        const currentDateTime = new Date();
-
-        // Need to do it this way so that .getTime() is from the start of the day and does include the seconds for the current day
-        const currentDate = new Date(currentDateTime.getFullYear(), currentDateTime.getMonth(), currentDateTime.getDate()).getTime();
+        const currentDate = getDate(new Date()).getTime();
         return date === currentDate;
     }
 
@@ -29,13 +35,6 @@ export default class Day extends React.PureComponent {
         return classnames(className);
     }
 
-    componentDidMount() {
-        this.shouldShowRemainder();
-    }
-
-    componentDidUpdate() {
-        this.shouldShowRemainder();
-    }
 
     shouldShowRemainder() {
         const {events} = this.props;
@@ -84,7 +83,7 @@ export default class Day extends React.PureComponent {
                     color={event.color}
                     title={event.title}
                     position={event.position}
-                    onClick={() => this.props.onClickEvent(event)}
+                    onClick={() => this.props.onClickEvent && this.props.onClickEvent(event)}
                 />
             )
         });
@@ -92,8 +91,9 @@ export default class Day extends React.PureComponent {
 
     returnEventRemainder() {
         const {events} = this.props;
-        if (Array.isArray(events) && events.length && events.length > this.state.eventNumber) {
-            const remainder = events.length - this.state.eventNumber;
+        const {eventNumber} = this.state;
+        if (Array.isArray(events) && events.length > eventNumber) {
+            const remainder = events.length - eventNumber;
             return (
                 <span className={styles.dayEventsRemaining}>
                     {`${remainder} more...`}
@@ -112,8 +112,8 @@ export default class Day extends React.PureComponent {
 
     render() {
         return (
-            <div id={'dayCell'} className={styles.dayCell} onClick={this.props.onClickDay}>
-                <div id={'dayHeader'} className={this.returnDayClassStyle()}>
+            <div id='dayCell' className={styles.dayCell} onClick={this.props.onClickDay}>
+                <div id='dayHeader' className={this.returnDayClassStyle()}>
                     <div className={this.returnDayTextClass()}>
                         <span>
                             {this.props.date.getDate()}

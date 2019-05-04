@@ -10,11 +10,13 @@
       text-align: center;
     }
   }
-  .dayDate.inactiveDay.currentDay {
-    color: #b5b5b5;
-    display: unset;
-    border-radius: unset;
-    background-color: transparent;
+  .inactiveDay {
+    .currentDay {
+      color: #b5b5b5;
+      display: unset;
+      border-radius: unset;
+      background-color: transparent;
+    }
   }
   .dayCell {
     width: 30px;
@@ -36,6 +38,12 @@
         left: 50%;
         transform: translate(-50%, -50%);
       }
+    }
+    .dayText {
+      position: absolute;
+      transform: translate(-50%, -50%);
+      top: 50%;
+      left: 50%;
     }
     .dayDate.currentDay {
       width: 50%;

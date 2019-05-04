@@ -4,13 +4,6 @@ import {getCalendarMonth, getEventsForCalendar} from "../util/calendar";
 import Week from "./Week";
 
 export default class Monthly extends React.Component {
-
-    onClickEvent(event) {
-        if (this.props.onClickEvent) {
-            this.props.onClickEvent(event);
-        }
-    }
-
     returnCalendar() {
         let calendar = getCalendarMonth(this.props.month, this.props.year);
         calendar = getEventsForCalendar(this.props.events, calendar);
@@ -24,7 +17,7 @@ export default class Monthly extends React.Component {
                             month: this.props.month,
                             year: this.props.year,
                         }}
-                        onClickEvent={this.onClickEvent}
+                        onClickEvent={this.props.onClickEvent}
                         onClickPrev={this.props.onClickPrev}
                         onClickNext={this.props.onClickNext}
                     />
