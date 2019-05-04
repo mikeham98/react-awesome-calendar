@@ -5,13 +5,13 @@
   position: absolute;
 }
 
-.dailyHourLineWrapper {
+.dailyTimeLine{
   position: absolute;
   width: calc(100% - 50px);
   margin-left: 50px;
 }
 
-.dailyTimeLine {
+.dailyTimeLineWrapper {
   position: relative;
   height: 500px;
   overflow-y: scroll;

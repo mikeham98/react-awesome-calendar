@@ -55,6 +55,7 @@ class Calendar extends React.PureComponent {
                 return (
                     <Daily
                         events={this.returnDailyEvents(events)}
+                        onClickEvent={this.props.onClickEvent}
                     />
                 );
         }
