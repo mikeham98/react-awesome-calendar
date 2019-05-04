@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './index.scss';
-import {getElementHeight} from "../util/getElementHeight";
+import {getElementHeight, getElementWidth} from "../util/getElementHeight";
 import Event from "./Event";
 
 export default class Daily extends React.Component {
@@ -21,23 +21,54 @@ export default class Daily extends React.Component {
             //TODO: change singlehour height in the other place event height?
             const hourWrapperHeight = getElementHeight(hourWrapper[0]);
             const hourHeaderHeight = getElementHeight(hourHeader[0]) / 2;
+            const alreadyDoneTest = [];
             dayEvents.forEach(event => {
                 const id = `dailyEvent-${event.id}`;
                 const fromDate = new Date(event.from);
                 const toDate = new Date(event.to);
-                const fromHour = (fromDate.getHours() + fromDate.getMinutes() / 60) - 1;
-                const toHour = (toDate.getHours() + toDate.getMinutes() / 60) - 1;
+                // TODO: remove login -1 find out more about utc time
+                const fromHour = (fromDate.getHours() + fromDate.getMinutes() / 60);
+                const toHour = (toDate.getHours() + toDate.getMinutes() / 60);
 
                 const timeDiff = toHour - fromHour;
-                console.log(fromHour);
-                console.log(toHour);
-                console.log(timeDiff);
+
                 const eventHeight = timeDiff * hourWrapperHeight;
                 const eventPosition = (fromHour * hourWrapperHeight) + hourHeaderHeight;
+
+                alreadyDoneTest.push(event.id);
+                //TODO: rename variables
+                this.isThereAnotherEvent(alreadyDoneTest, dayEvents, fromHour, toHour, event.id);
+
                 document.getElementById(id).style.top = `${eventPosition}px`;
-                // TODO: need to create a function called getElementWidth and use this on dailyHourText
-                document.getElementById(id).style.left = '50px';
                 document.getElementById(id).style.height = `${eventHeight}px`;
+            });
+        }
+    }
+
+    isThereAnotherEvent(alreadyDoneTest, events, fromHour, toHour, currentId) {
+        const changedEventsTest = events.filter(e => !alreadyDoneTest.find(id => id === e.id));
+
+        const otherEvents = changedEventsTest.filter(event => {
+            const eventFromDate = new Date(event.from);
+            const eventToDate = new Date(event.to);
+            const eventFromHour = (eventFromDate.getHours() + eventFromDate.getMinutes() / 60);
+            const eventToHour = (eventToDate.getHours() + eventToDate.getMinutes() / 60);
+
+            return (fromHour >= eventToHour && toHour < eventFromHour) || (eventToHour >= fromHour && eventFromHour < toHour);
+        });
+        if (Array.isArray(otherEvents) && otherEvents.length) {
+            const hourText = document.getElementsByClassName('dailyHourText');
+            const singleHourTextWidth = getElementWidth(hourText[0]);
+            const id = `dailyEvent-${currentId}`;
+            document.getElementById(id).style.width = `calc(${100 / (otherEvents.length + 1)}% - ${singleHourTextWidth}px)`;
+            document.getElementById(id).style.left = '0px';
+
+            otherEvents.forEach((e, i) => {
+                alreadyDoneTest.push(e.id);
+                const eventId = `dailyEvent-${e.id}`;
+                console.log('others', eventId);
+                document.getElementById(eventId).style.width = `calc(${100 / (otherEvents.length + 1)}% - ${singleHourTextWidth}px)`;
+                document.getElementById(eventId).style.left = `${(100 / (otherEvents.length + 1)) * (i + 1)}%`;
             });
         }
     }
@@ -47,10 +78,20 @@ export default class Daily extends React.Component {
         return hours.map((hour, i) => {
             return (
                 <div key={i} className={styles.dailyHourWrapper}>
+                    <div className={styles.dailyHourText}>
+                        <span>{hour}</span>
+                    </div>
+                </div>
+            )
+        });
+    }
+
+    returnHoursLine() {
+        const hours = ['00:00', '01:00', '02:00', '03:00', '04:00', '05:00', '06:00', '07:00', '08:00', '09:00', '10:00', '11:00', '12:00', '13:00', '14:00', '15:00', '16:00', '17:00', '18:00', '19:00', '20:00', '21:00', '22:00', '23:00', '24:00'];
+        return hours.map((hour, i) => {
+            return (
+                <div key={i} className={styles.dailyHourWrapper}>
                     <div className={styles.dailyHour}>
-                        <div className={styles.dailyHourText}>
-                            <span>{hour}</span>
-                        </div>
                         <div className={styles.dailyHourLine}/>
                     </div>
                 </div>
@@ -64,10 +105,11 @@ export default class Daily extends React.Component {
             const dayEvents = events.filter(e => !e.spread);
             return dayEvents.map(event => {
                 return (
-                    <div id={`dailyEvent-${event.id}`} className={styles.dayEvent}>
+                    <div key={event.id} id={`dailyEvent-${event.id}`} className={styles.dayEvent}>
                         <Event
                             color={event.color}
-                            title={event.title}
+                            title={`${event.id} ${event.title}`}
+                            onClick
                         />
                     </div>
                 )
@@ -78,8 +120,13 @@ export default class Daily extends React.Component {
     returnTimeLine() {
         return (
             <div id='dailyEventList' className={styles.dailyTimeLine}>
-                {this.returnEvents()}
-                {this.returnHours()}
+                <div className={styles.dailyHourTextWrapper}>
+                    {this.returnHours()}
+                </div>
+                <div className={styles.dailyHourLineWrapper}>
+                    {this.returnEvents()}
+                    {this.returnHoursLine()}
+                </div>
             </div>
         )
     }
@@ -102,7 +149,6 @@ export default class Daily extends React.Component {
     }
 
     render() {
-        //TODO: enable multiple events on same hour
         return (
             <div className={styles.dailyWrapper}>
                 {this.returnAllDayEvents()}

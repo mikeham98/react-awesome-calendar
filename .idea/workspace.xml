@@ -2,20 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="11f64a0a-dda6-48e3-81a5-557abe0a870b" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/app/Calendar/Daily/Event.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/Calendar/Daily/Event.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/App.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/Calendar/Daily/Event.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Calendar/Daily/Event.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/Calendar/Daily/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Calendar/Daily/index.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/Calendar/Daily/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Calendar/Daily/index.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/Calendar/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Calendar/Header.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/Calendar/Mode.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Calendar/Mode.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/Calendar/Monthly/Week.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Calendar/Monthly/Week.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/Calendar/Monthly/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Calendar/Monthly/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/Calendar/Yearly/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Calendar/Yearly/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/Calendar/constants/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Calendar/constants/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/Calendar/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Calendar/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/Calendar/util/calendar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Calendar/util/calendar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/Calendar/util/getElementHeight.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Calendar/util/getElementHeight.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -30,34 +23,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="index.jsx" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/Calendar/index.jsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="161">
-              <caret line="110" column="5" lean-forward="true" selection-start-line="110" selection-start-column="5" selection-end-line="110" selection-end-column="5" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.jsx" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/Calendar/Yearly/index.jsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="158">
-              <caret line="20" selection-start-line="20" selection-end-line="20" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.jsx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/app/Calendar/Daily/index.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="87">
-              <caret line="11" column="31" lean-forward="true" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
+            <state relative-caret-position="298">
+              <caret line="125" column="43" selection-start-line="125" selection-start-column="43" selection-end-line="125" selection-end-column="43" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -65,35 +34,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="App.jsx" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/app/App.jsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="17" column="10" lean-forward="true" selection-start-line="17" selection-start-column="10" selection-end-line="17" selection-end-column="10" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.scss" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.scss" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/app/Calendar/Daily/index.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="12" lean-forward="true" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Event.jsx" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/Calendar/Daily/Event.jsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="96" selection-start-line="6" selection-start-column="79" selection-end-line="6" selection-end-column="96" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="383">
+              <caret line="50" selection-start-line="50" selection-end-line="50" />
             </state>
           </provider>
         </entry>
@@ -101,8 +46,8 @@
       <file leaf-file-name="Event.scss" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/app/Calendar/Daily/Event.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="1" lean-forward="true" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+            <state relative-caret-position="30">
+              <caret line="2" column="13" lean-forward="true" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -111,7 +56,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>calendarDayOfWeek</find>
       <find>calendarHeader</find>
       <find>monthText</find>
       <find>yearText</find>
@@ -141,6 +85,7 @@
       <find>returnDailyEvents</find>
       <find>hourHeight</find>
       <find>onClickPrev</find>
+      <find>dailyHour</find>
     </findStrings>
     <replaceStrings>
       <replace>originalEndDate</replace>
@@ -194,9 +139,7 @@
         <option value="$PROJECT_DIR$/src/themes/app.scss" />
         <option value="$PROJECT_DIR$/src/app/Calendar/Monthly/Event.styles.scss" />
         <option value="$PROJECT_DIR$/src/app/Calendar/util/getDivHeight.js" />
-        <option value="$PROJECT_DIR$/src/app/Calendar/util/getElementHeight.js" />
         <option value="$PROJECT_DIR$/src/app/Calendar/util/date.js" />
-        <option value="$PROJECT_DIR$/src/app/Calendar/Monthly/Day.styles.scss" />
         <option value="$PROJECT_DIR$/src/app/Calendar/Yearly/index.scss" />
         <option value="$PROJECT_DIR$/src/app/Calendar/Mode.jsx" />
         <option value="$PROJECT_DIR$/src/app/Calendar/Monthly/Event.jsx" />
@@ -207,12 +150,14 @@
         <option value="$PROJECT_DIR$/src/app/Calendar/Header.jsx" />
         <option value="$PROJECT_DIR$/src/app/Calendar/util/calendar.js" />
         <option value="$PROJECT_DIR$/src/app/Calendar/Daily/Event.jsx" />
-        <option value="$PROJECT_DIR$/src/app/Calendar/Daily/Event.scss" />
-        <option value="$PROJECT_DIR$/src/app/App.jsx" />
-        <option value="$PROJECT_DIR$/src/app/Calendar/Daily/index.scss" />
         <option value="$PROJECT_DIR$/src/app/Calendar/Yearly/index.jsx" />
-        <option value="$PROJECT_DIR$/src/app/Calendar/Daily/index.jsx" />
+        <option value="$PROJECT_DIR$/src/app/Calendar/util/getElementHeight.js" />
+        <option value="$PROJECT_DIR$/src/app/App.jsx" />
         <option value="$PROJECT_DIR$/src/app/Calendar/index.jsx" />
+        <option value="$PROJECT_DIR$/src/app/Calendar/Monthly/Day.styles.scss" />
+        <option value="$PROJECT_DIR$/src/app/Calendar/Daily/Event.scss" />
+        <option value="$PROJECT_DIR$/src/app/Calendar/Daily/index.jsx" />
+        <option value="$PROJECT_DIR$/src/app/Calendar/Daily/index.scss" />
       </list>
     </option>
   </component>
@@ -237,9 +182,9 @@
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="378" />
+    <option name="x" value="457" />
     <option name="y" value="23" />
-    <option name="width" value="1277" />
+    <option name="width" value="1026" />
     <option name="height" value="825" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -381,26 +326,26 @@
       <workItem from="1556742617210" duration="806000" />
       <workItem from="1556882856128" duration="11000" />
       <workItem from="1556891132877" duration="7813000" />
-      <workItem from="1556900465242" duration="24170000" />
+      <workItem from="1556900465242" duration="24184000" />
+      <workItem from="1556970656129" duration="6001000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="57727000" />
+    <option name="totallyTimeSpent" value="63742000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="378" y="23" width="1277" height="825" extended-state="0" />
+    <frame x="457" y="23" width="1026" height="825" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49838188" visible="true" weight="0.18637432" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49838188" visible="true" weight="0.099415205" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5014006" side_tool="true" weight="0.3276699" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32924962" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.3258427" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32921812" />
       <window_info id="Structure" order="1" sideWeight="0.50161815" side_tool="true" weight="0.5053111" />
-      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49859944" visible="true" weight="0.29294273" />
+      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49859944" visible="true" weight="0.07190413" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -410,6 +355,7 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32924962" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -420,7 +366,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="3" />
+      <option name="time" value="17" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -477,9 +423,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="18" column="25" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -619,13 +562,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/Calendar/Monthly/Week.styles.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="35" selection-start-line="1" selection-start-column="35" selection-end-line="1" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/index.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -640,38 +576,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/Calendar/Monthly/index.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="19" lean-forward="true" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/Calendar/Monthly/Event.styles.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="21" lean-forward="true" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/Calendar/util/getElementHeight.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="29" selection-start-column="13" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/Calendar/util/date.js">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="20" selection-start-column="13" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/Calendar/Monthly/Day.styles.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-73">
-          <caret line="7" column="11" lean-forward="true" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
         </state>
       </provider>
     </entry>
@@ -686,9 +594,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
           <caret line="13" column="1" lean-forward="true" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -723,9 +628,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-10">
           <caret line="4" column="21" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -735,16 +637,6 @@
           <caret line="19" column="57" selection-start-line="19" selection-start-column="57" selection-end-line="19" selection-end-column="57" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/Calendar/util/calendar.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="103" column="33" selection-start-line="103" selection-start-column="33" selection-end-line="103" selection-end-column="33" />
-          <folding>
-            <element signature="e#0#72#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -759,34 +651,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/Calendar/Daily/Event.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="1" lean-forward="true" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/Calendar/Daily/index.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="12" lean-forward="true" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/Calendar/Daily/Event.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
+        <state relative-caret-position="75">
           <caret line="6" column="96" selection-start-line="6" selection-start-column="79" selection-end-line="6" selection-end-column="96" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/Calendar/Daily/index.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="87">
-          <caret line="11" column="31" lean-forward="true" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
@@ -795,7 +663,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app/Calendar/Yearly/index.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
+        <state relative-caret-position="255">
           <caret line="20" selection-start-line="20" selection-end-line="20" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
@@ -803,10 +671,41 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/Calendar/Monthly/index.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="19" lean-forward="true" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/Calendar/Monthly/Event.styles.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="21" lean-forward="true" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/Calendar/util/calendar.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="28" selection-start-line="25" selection-start-column="28" selection-end-line="25" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#72#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/Calendar/util/getElementHeight.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="28" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/Calendar/index.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="110" column="5" lean-forward="true" selection-start-line="110" selection-start-column="5" selection-end-line="110" selection-end-column="5" />
+        <state relative-caret-position="-474">
+          <caret line="15" column="29" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="29" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
@@ -815,11 +714,49 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app/App.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="17" column="10" lean-forward="true" selection-start-line="17" selection-start-column="10" selection-end-line="17" selection-end-column="10" />
+        <state relative-caret-position="152">
+          <caret line="12" column="21" lean-forward="true" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/Calendar/Monthly/Week.styles.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="35" selection-start-line="1" selection-start-column="35" selection-end-line="1" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/Calendar/Monthly/Day.styles.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="11" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/Calendar/Daily/Event.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="13" lean-forward="true" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/Calendar/Daily/index.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="298">
+          <caret line="125" column="43" selection-start-line="125" selection-start-column="43" selection-end-line="125" selection-end-column="43" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/Calendar/Daily/index.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="383">
+          <caret line="50" selection-start-line="50" selection-end-line="50" />
         </state>
       </provider>
     </entry>

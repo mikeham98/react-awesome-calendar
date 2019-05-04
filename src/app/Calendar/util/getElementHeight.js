@@ -5,3 +5,11 @@ export const getElementHeight = (element) => {
 
     return height;
 };
+
+export const getElementWidth = (element) => {
+    let width = element.offsetWidth;
+    width += parseInt(window.getComputedStyle(element).getPropertyValue('margin-left'));
+    width += parseInt(window.getComputedStyle(element).getPropertyValue('margin-right'));
+
+    return width;
+};

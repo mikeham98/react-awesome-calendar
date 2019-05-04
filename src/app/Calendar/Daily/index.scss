@@ -1,6 +1,16 @@
 .dailyWrapper {
 }
 
+.dailyHourTextWrapper {
+  position: absolute;
+}
+
+.dailyHourLineWrapper {
+  position: absolute;
+  width: calc(100% - 50px);
+  margin-left: 50px;
+}
+
 .dailyTimeLine {
   position: relative;
   height: 500px;
@@ -9,7 +19,7 @@
 
 
 .dailyHourWrapper{
-  height: 80px;
+  height: 40px;
 }
 
 .dailyHour {
@@ -28,12 +38,11 @@
 }
 
 .dailyHourLine{
-  left: 50px;
   height: 1px;
+  width: 100%;
   transform: translateY(-50%);
   top: 50%;
   position: absolute;
-  width: calc(100% - 50px);
   background-color: #b5b5b5;
 }
 

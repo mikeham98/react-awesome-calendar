@@ -16,9 +16,9 @@ const events = [{
     title: 'This is another title'
 }, {
     id: 3,
-    color: '#fd3153',
-    from: '2019-05-01T13:00:00+00:00',
-    to: '2019-05-05T14:00:00+00:00',
+    color: 'green',
+    from: '2019-05-04T13:00:00+00:00',
+    to: '2019-05-04T20:00:00+00:00',
     title: 'This is another title'
 }, {
     id: 4,
@@ -28,9 +28,21 @@ const events = [{
     title: 'This is another title'
 }, {
     id: 5,
+    color: '#fd3153',
+    from: '2019-05-04T16:12:00+00:00',
+    to: '2019-05-04T19:50:00+00:00',
+    title: 'This is a test'
+}, {
+    id: 6,
     color: '#8281fd',
-    from: '2019-06-01T09:00:00+00:00',
-    to: '2019-06-01T10:00:00+00:00',
+    from: '2019-05-04T20:00:00+00:00',
+    to: '2019-05-04T21:00:00+00:00',
+    title: 'This is final title'
+}, {
+    id: 8,
+    color: 'green',
+    from: '2019-05-15T12:00:00+00:00',
+    to: '2019-05-15T21:00:00+00:00',
     title: 'This is final title'
 }];
 
