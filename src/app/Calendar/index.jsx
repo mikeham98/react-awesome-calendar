@@ -4,61 +4,71 @@ import Header from "./Header";
 import Monthly from "./Monthly";
 import Yearly from "./Yearly";
 import Daily from "./Daily";
-import {yearMode, monthMode, dayMode} from './constants/index'
+import {yearlyMode, monthlyMode, dailyMode} from './constants/index'
 import Mode from "./Mode";
+import {formatEvents} from "./util/calendar";
 
 class Calendar extends React.PureComponent {
     constructor(props) {
         super(props);
         const currentDate = new Date();
         this.state = {
-            mode: monthMode,
+            mode: dailyMode,
+            day: currentDate.getDate(),
             month:  currentDate.getMonth(),
             year: currentDate.getFullYear()
         };
+        this.onClickDay = this.onClickDay.bind(this);
         this.onClickMode = this.onClickMode.bind(this);
         this.onClickPrev = this.onClickPrev.bind(this);
         this.onClickNext = this.onClickNext.bind(this);
         this.onClickMonth = this.onClickMonth.bind(this);
     }
 
+    returnDailyEvents(events) {
+        const {year, month, day} = this.state;
+        const date = new Date(year, month, day);
+        return events[date.getTime()];
+    }
+
     returnCalendar() {
+        const events = formatEvents(this.props.events);
         switch (this.state.mode) {
-            case yearMode:
+            case yearlyMode:
                 return (
                     <Yearly
                         year={this.state.year}
-                        onClickPrev={this.onClickPrev}
-                        onClickNext={this.onClickNext}
                         onClickMonth={this.onClickMonth}
                     />
                 );
-            case monthMode:
+            case monthlyMode:
                 return (
                     <Monthly
                         month={this.state.month}
                         year={this.state.year}
-                        events={this.props.events}
+                        events={events}
+                        onClickDay={this.onClickDay}
                         onClickEvent={this.props.onClickEvent}
-                        onClickPrev={this.onClickPrev}
-                        onClickNext={this.onClickNext}
                     />
                 );
-            case dayMode:
+            case dailyMode:
                 return (
-                    <Daily/>
+                    <Daily
+                        events={this.returnDailyEvents(events)}
+                    />
                 );
         }
     }
 
     onClickPrev() {
+        let day = this.state.day;
         let month = this.state.month;
         let year = this.state.year;
         switch (this.state.mode) {
-            case yearMode:
+            case yearlyMode:
                 year -= 1;
                 break;
-            case monthMode:
+            case monthlyMode:
                 const prevMonth = this.state.month - 1;
                 month = prevMonth;
                 if (prevMonth < 0) {
@@ -66,11 +76,28 @@ class Calendar extends React.PureComponent {
                     year -= 1;
                 }
                 break;
-            case dayMode:
-
+            case dailyMode:
+                const testDate = new Date(year, month, day);
+                testDate.setDate(testDate.getDate() - 1);
+                day = testDate.getDate();
+                month = testDate.getMonth();
+                year = testDate.getFullYear();
                 break;
         }
         this.setState({
+            day,
+            month,
+            year
+        });
+    }
+
+    onClickDay(date) {
+        const day = date.getDate();
+        const month = date.getMonth();
+        const year = date.getFullYear();
+        this.setState({
+            mode: dailyMode,
+            day,
             month,
             year
         });
@@ -79,18 +106,19 @@ class Calendar extends React.PureComponent {
     onClickMonth(month) {
         this.setState({
             month,
-            mode: monthMode
+            mode: monthlyMode
         })
     }
 
     onClickNext() {
+        let day = this.state.day;
         let month = this.state.month;
         let year = this.state.year;
         switch (this.state.mode) {
-            case yearMode:
+            case yearlyMode:
                 year += 1;
                 break;
-            case monthMode:
+            case monthlyMode:
                 const nextMonth = this.state.month + 1;
                 month = nextMonth;
                 if (nextMonth > 11) {
@@ -98,11 +126,16 @@ class Calendar extends React.PureComponent {
                     year += 1;
                 }
                 break;
-            case dayMode:
-
+            case dailyMode:
+                const testDate = new Date(year, month, day);
+                testDate.setDate(testDate.getDate() + 1);
+                day = testDate.getDate();
+                month = testDate.getMonth();
+                year = testDate.getFullYear();
                 break;
         }
         this.setState({
+            day,
             month,
             year
         });
@@ -118,6 +151,7 @@ class Calendar extends React.PureComponent {
         const props = {
             month: this.state.month,
             year: this.state.year,
+            day: this.state.day,
             mode: this.state.mode,
             onClickPrev: this.onClickPrev,
             onClickNext: this.onClickNext,

@@ -101,6 +101,7 @@ export const formatEvents = (events) => {
                 }
                 formattedEvents[dateTime].push({
                     ...event,
+                    spread: true,
                     date: dateIteration,
                     position
                 });
@@ -117,18 +118,16 @@ export const formatEvents = (events) => {
 };
 
 export const getEventsForCalendar = (events, calendar) => {
-    if (Array.isArray(events) && events.length) {
-        const formattedEvents = formatEvents(events);
-
+    if (events && Object.keys(events)) {
         return calendar.map(week => {
             return week.map(day => {
-                let events = undefined;
-                if(formattedEvents[day.date.getTime()]) {
-                    events = formattedEvents[day.date.getTime()];
+                let dayEvents;
+                if(events[day.date.getTime()]) {
+                    dayEvents = events[day.date.getTime()];
                 }
                 return {
                     ...day,
-                    events
+                    events: dayEvents
                 }
             });
         })

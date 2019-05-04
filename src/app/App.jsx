@@ -22,9 +22,9 @@ const events = [{
     title: 'This is another title'
 }, {
     id: 4,
-    color: 'green',
-    from: '2019-05-03T17:00:00+00:00',
-    to: '2019-05-03T19:00:00+00:00',
+    color: '#8281fd',
+    from: '2019-05-04T17:00:00+00:00',
+    to: '2019-05-04T19:00:00+00:00',
     title: 'This is another title'
 }, {
     id: 5,

@@ -11,6 +11,8 @@ export default class Week extends React.PureComponent {
             } else {
                 this.props.onClickNext();
             }
+        }else {
+            this.props.onClickDay(day.date);
         }
     }
 

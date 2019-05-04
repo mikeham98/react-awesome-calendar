@@ -11,15 +11,13 @@ export default class Yearly extends React.Component {
         let calendar = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
         return calendar.map((month) => {
             return (
-                <div className={styles.yearlyMonthRow}>
+                <div key={month} className={styles.yearlyMonthRow}>
                     <div style={{cursor: 'pointer'}} onClick={() => this.props.onClickMonth(month)}>
                         <h3 className={styles.yearlyMonthName}>{getMonthName(month)}</h3>
                         <Monthly
                             month={month}
                             daysOfWeek={shortHandDays}
                             year={this.props.year}
-                            // onClickPrev={this.props.onClickPrev}
-                            // onClickNext={this.props.onClickNext}
                         />
                     </div>
                 </div>

@@ -17,6 +17,7 @@ export default class Monthly extends React.Component {
                             month: this.props.month,
                             year: this.props.year,
                         }}
+                        onClickDay={this.props.onClickDay}
                         onClickEvent={this.props.onClickEvent}
                         onClickPrev={this.props.onClickPrev}
                         onClickNext={this.props.onClickNext}
@@ -29,9 +30,9 @@ export default class Monthly extends React.Component {
     returnDayOfWeekHeader() {
         // let days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
         // days = [...days.slice(this.props.firstDayOfWeek), ...days.slice(0, this.props.firstDayOfWeek)];
-        return this.props.daysOfWeek.map(day => {
+        return this.props.daysOfWeek.map((day, i) => {
             return (
-                <div key={day}>{day}</div>
+                <div key={i}>{day}</div>
             )
         });
     }
