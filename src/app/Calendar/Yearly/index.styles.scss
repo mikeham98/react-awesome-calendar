@@ -1,9 +1,18 @@
+.yearlyCalendar {
+  text-align: center;
+}
+
+.yearlyMonthWrapper {
+
+}
+
 .yearlyMonth {
   display: inline-block;
   float: left;
-  text-align: center;
-  height: 250px;
-  margin: 20px;
+  height: 300px;
+  padding: 20px;
+  box-sizing: border-box;
+  width: calc(100% / 3);
   .yearlyMonthName {
     margin: 20px 0;
     text-align: left;
@@ -25,10 +34,8 @@
     }
   }
   .dayCell {
-    width: 30px;
     height: 30px;
     text-align: center;
-    position: relative;
     .dayDate {
       font-size: 0.8em;
       display: inline-block;

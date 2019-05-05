@@ -16,7 +16,7 @@ const events = [{
     title: 'This is another title'
 }, {
     id: 3,
-    color: 'green',
+    color: '#3694DF',
     from: '2019-05-05T13:00:00+00:00',
     to: '2019-05-05T20:00:00+00:00',
     title: 'This is another title'
@@ -36,11 +36,11 @@ const events = [{
     id: 6,
     color: '#8281fd',
     from: '2019-05-05T20:00:00+00:00',
-    to: '2019-05-05T21:00:00+00:00',
+    to: '2019-05-05T20:30:00+00:00',
     title: 'This is final title'
 }, {
-    id: 8,
-    color: 'green',
+    id: 7,
+    color: '#fd9c60',
     from: '2019-05-15T12:00:00+00:00',
     to: '2019-05-15T21:00:00+00:00',
     title: 'This is final title'

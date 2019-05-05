@@ -110,13 +110,17 @@ export default class Daily extends React.Component {
         if (Array.isArray(events) && events.length) {
             const dayEvents = events.filter(e => !e.spread);
             return dayEvents.map(event => {
-                console.log(event.from.getUTCHours());
+                // const from = new Date(event.from);
+                // const fromTime = getTimeFromDate(from);
+                // const to = new Date(event.to);
+                // const toTime = getTimeFromDate(to);
 
                 return (
                     <div key={event.id} id={`dailyEvent-${event.id}`} className={styles.dayEvent}>
                         <Event
                             color={event.color}
                             title={event.title}
+                            // time={`${fromTime} - ${toTime}`}
                             onClick={() => this.onClickEvent(event)}
                         />
                     </div>
@@ -150,9 +154,8 @@ export default class Daily extends React.Component {
         if (Array.isArray(events) && events.length) {
             const dailyEvents = events.filter(e => e.spread);
             return dailyEvents.map(event => {
-                const from = new Date(event.from);
-                const to = new Date(event.to);
-                console.log(getTimeFromDate(from));
+                // const from = new Date(event.from);
+                // const to = new Date(event.to);
                 return (
                     <div key={event.id} className={styles.allDayEvent}>
                         <Event

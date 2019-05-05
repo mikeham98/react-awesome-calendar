@@ -28,7 +28,9 @@ export default class Yearly extends React.Component {
     render() {
         return (
             <div className={styles.yearlyCalendar}>
-                {this.returnCalendar()}
+                <div className={styles.yearlyMonthWrapper}>
+                    {this.returnCalendar()}
+                </div>
             </div>
         )
     }
