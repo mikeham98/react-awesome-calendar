@@ -1,6 +1,6 @@
 import React from 'react';
-import Calendar from "./Calendar/index";
-import styles from '../themes/app.scss';
+import Calendar from "react-awesome-calendar";
+import styles from './themes/app.scss';
 
 const events = [{
     id: 1,
@@ -50,10 +50,11 @@ class App extends React.Component {
     render() {
         return (
             <div className={styles.pageCalendar}>
+                <h1>example</h1>
                 <Calendar
                     onClickEvent={(event) => console.log('this is an event', event)}
                     events={events}
-                    // modes={['year','month']}
+                    modes={['year', 'month']}
                 />
             </div>
         );
