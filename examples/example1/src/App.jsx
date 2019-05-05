@@ -50,11 +50,9 @@ class App extends React.Component {
     render() {
         return (
             <div className={styles.pageCalendar}>
-                <h1>example</h1>
                 <Calendar
                     onClickEvent={(event) => console.log('this is an event', event)}
                     events={events}
-                    modes={['year', 'month']}
                 />
             </div>
         );

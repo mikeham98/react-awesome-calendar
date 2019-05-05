@@ -1,36 +1,22 @@
 const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 const WebpackMd5Hash = require('webpack-md5-hash');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
-const {UnusedFilesWebpackPlugin} = require("unused-files-webpack-plugin");
 
 module.exports = {
-    entry: {main: './src/app/index.jsx'},
+    entry: './src/index.js',
     output: {
-        path: path.resolve(__dirname, 'dist'),
-        publicPath: '/',
-        filename: 'bundle.js',
+        path: path.resolve(__dirname, 'build'),
+        filename: 'index.js',
+        libraryTarget: 'commonjs2'
     },
     module: {
         rules: [
             {
                 test: /\.(js|jsx)$/,
-                exclude: /node_modules/,
+                exclude: /(node_modules|build)/,
                 use: {
-                    loader: 'babel-loader',
+                    loader: 'babel-loader'
                 },
-                resolve: {
-                    extensions: ['.js', '.jsx'],
-                },
-            },
-            {
-                test: /\.html$/,
-                use: [
-                    {
-                        loader: 'html-loader',
-                        options: {minimize: true},
-                    },
-                ],
             },
             {
                 test: /\.(ttf|woff|woff2|eot|png|jpg|gif|svg|base64|mp4)$/,
@@ -47,35 +33,31 @@ module.exports = {
                 test: /\.scss|css$/,
                 use: [
                     {
-                        loader: 'style-loader', // creates style nodes from JS strings
+                        loader: 'style-loader',
                     },
                     {
-                        loader: 'css-loader', // translates CSS into CommonJS
+                        loader: 'css-loader',
                         options: {
-                            // context: path.resolve(__dirname, 'src'),
                             modules: true,
                             localIdentName: '[local]',
                         },
                     },
                     {
-                        loader: 'sass-loader', // compiles Sass to CSS
+                        loader: 'sass-loader',
                     },
                 ],
             },
         ],
     },
-    devServer: {
-        historyApiFallback: true,
-    },
     plugins: [
         new CleanWebpackPlugin('dist', {}),
-        new HtmlWebpackPlugin({
-            template: './public/index.html',
-            filename: 'index.html',
-        }),
-        new WebpackMd5Hash(),
-        new UnusedFilesWebpackPlugin({
-            patterns: ["src/app/**/*.*"]
-        })
+        new WebpackMd5Hash()
     ],
+    externals: {
+        'react': 'commonjs react'
+    },
+    resolve: {
+        extensions: [".js", ".jsx"],
+        symlinks: true
+    },
 };

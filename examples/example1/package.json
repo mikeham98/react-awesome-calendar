@@ -5,7 +5,8 @@
     "start": "webpack-dev-server --mode development --open --watch",
     "build": "webpack --mode production",
     "fix-code": "prettier-eslint --write './src/**/*.{js,jsx}' ",
-    "fix-styles": "prettier-stylelint --write './src/**/*.{css,scss}' "
+    "fix-styles": "prettier-stylelint --write './src/**/*.{css,scss}' ",
+    "updateLink": "npm rm react-awesome-calendar -g && npm link react-awesome-calendar"
   },
   "browserslist": [
     ">0.2%",

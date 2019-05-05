@@ -1,5 +1,3 @@
-import Calendar from './Calendar/index';
+import Calendar from './Calendar/';
 
-module.exports = {
-    Calendar
-};
+export default Calendar;
