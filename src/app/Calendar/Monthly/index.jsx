@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './index.scss';
+import styles from './index.styles.scss';
 import {getCalendarMonth, getEventsForCalendar} from "../util/calendar";
 import Week from "./Week";
 
@@ -28,8 +28,6 @@ export default class Monthly extends React.Component {
     }
 
     returnDayOfWeekHeader() {
-        // let days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
-        // days = [...days.slice(this.props.firstDayOfWeek), ...days.slice(0, this.props.firstDayOfWeek)];
         return this.props.daysOfWeek.map((day, i) => {
             return (
                 <div key={i}>{day}</div>
@@ -39,7 +37,7 @@ export default class Monthly extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className={styles.monthlyCalendar}>
                 <div className={styles.calendarDayOfWeek}>
                     {this.returnDayOfWeekHeader()}
                 </div>

@@ -1,7 +1,13 @@
-.yearlyMonthRow {
-  float: left;
+.yearlyMonth {
   display: inline-block;
+  float: left;
+  text-align: center;
+  height: 250px;
   margin: 20px;
+  .yearlyMonthName {
+    margin: 20px 0;
+    text-align: left;
+  }
   .weekRow {
     height: 30px;
   }

@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './Event.scss';
+import styles from './Event.styles.scss';
 
 export default class Event extends React.Component {
     render() {

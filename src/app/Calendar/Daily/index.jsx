@@ -1,7 +1,8 @@
 import React from 'react';
-import styles from './index.scss';
-import {getElementHeight, getElementWidth} from "../util/getElementHeight";
+import styles from './index.styles.scss';
+import {getElementHeight} from "../util/getElementHeight";
 import Event from "./Event";
+import {getDate, getTimeFromDate} from "../util/date";
 
 export default class Daily extends React.Component {
     componentDidMount() {
@@ -44,7 +45,7 @@ export default class Daily extends React.Component {
     }
 
     getHoursMins(date) {
-        return (date.getHours() + date.getMinutes() / 60);
+        return (date.getUTCHours() + date.getUTCMinutes() / 60);
     }
 
     handleEventWidth(eventWidthHandled, events, fromHour, toHour, currentId) {
@@ -53,17 +54,19 @@ export default class Daily extends React.Component {
         const otherEvents = changedEventsTest.filter(event => {
             const eventFromDate = new Date(event.from);
             const eventToDate = new Date(event.to);
-            const eventFromHour = (eventFromDate.getHours() + eventFromDate.getMinutes() / 60);
-            const eventToHour = (eventToDate.getHours() + eventToDate.getMinutes() / 60);
+            const eventFromHour = (eventFromDate.getUTCHours() + eventFromDate.getUTCMinutes() / 60);
+            const eventToHour = (eventToDate.getUTCHours() + eventToDate.getUTCMinutes() / 60);
 
             return (fromHour >= eventToHour && toHour < eventFromHour) || (eventToHour >= fromHour && eventFromHour < toHour);
         });
         if (Array.isArray(otherEvents) && otherEvents.length) {
             const id = `dailyEvent-${currentId}`;
+            const dayEventMultiple = ' dayEventMultiple';
             const numberOfEvents = otherEvents.length + 1;
             const width = `${100 / numberOfEvents}%`;
             document.getElementById(id).style.width = width;
             document.getElementById(id).style.left = '0px';
+            document.getElementById(id).className += dayEventMultiple;
 
             otherEvents.forEach((e, i) => {
                 eventWidthHandled.push(e.id);
@@ -71,6 +74,7 @@ export default class Daily extends React.Component {
                 console.log('others', eventId);
                 document.getElementById(eventId).style.width = width;
                 document.getElementById(eventId).style.left = `${(100 / numberOfEvents) * (i + 1)}%`;
+                document.getElementById(eventId).className += dayEventMultiple;
             });
         }
     }
@@ -106,11 +110,13 @@ export default class Daily extends React.Component {
         if (Array.isArray(events) && events.length) {
             const dayEvents = events.filter(e => !e.spread);
             return dayEvents.map(event => {
+                console.log(event.from.getUTCHours());
+
                 return (
                     <div key={event.id} id={`dailyEvent-${event.id}`} className={styles.dayEvent}>
                         <Event
                             color={event.color}
-                            title={`${event.id} ${event.title}`}
+                            title={event.title}
                             onClick={() => this.onClickEvent(event)}
                         />
                     </div>
@@ -144,6 +150,9 @@ export default class Daily extends React.Component {
         if (Array.isArray(events) && events.length) {
             const dailyEvents = events.filter(e => e.spread);
             return dailyEvents.map(event => {
+                const from = new Date(event.from);
+                const to = new Date(event.to);
+                console.log(getTimeFromDate(from));
                 return (
                     <div key={event.id} className={styles.allDayEvent}>
                         <Event
