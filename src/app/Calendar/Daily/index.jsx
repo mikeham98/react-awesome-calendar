@@ -70,7 +70,6 @@ export default class Daily extends React.Component {
             otherEvents.forEach((e, i) => {
                 eventWidthHandled.push(e.id);
                 const eventId = `dailyEvent-${e.id}`;
-                console.log('others', eventId);
                 document.getElementById(eventId).style.width = width;
                 document.getElementById(eventId).style.left = `${(100 / numberOfEvents) * (i + 1)}%`;
                 document.getElementById(eventId).className += dayEventMultiple;
