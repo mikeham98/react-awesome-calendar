@@ -1,0 +1,47 @@
+.dayCellEvent {
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+/Edge */
+  user-select: none; /* Standard */
+  //cursor: pointer;
+  display: block;
+  text-align: left;
+  width: 100%;
+  text-overflow: ellipsis;
+  border-radius: 8px;
+  margin-bottom: 3px;
+}
+
+.dayCellEvent:nth-last-of-type(0) {
+  margin-bottom: 0;
+}
+
+.eventTitle {
+  padding: 0 5px;
+  color: white;
+  font-size: 0.6em;
+  line-height: 16px;
+  font-weight: 600;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  display: block;
+  overflow: hidden;
+}
+
+.eventStart {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.eventMiddle {
+  border-radius: 0;
+}
+
+.eventEnd {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.eventInactive {
+  opacity: 0.5;
+}

@@ -1,0 +1,64 @@
+.dailyWrapper {
+}
+
+.dailyHourTextWrapper {
+  position: absolute;
+}
+
+.dailyTimeLine{
+  position: absolute;
+  width: calc(100% - 50px);
+  margin-left: 50px;
+}
+
+.dailyTimeLineWrapper {
+  position: relative;
+  height: 500px;
+  overflow-y: scroll;
+}
+
+
+.dailyHourWrapper{
+  height: 40px;
+}
+
+.dailyHour {
+  position: relative;
+  height: 20px;
+}
+
+.dailyHourText {
+  height: 100%;
+  line-height: 20px;
+  width: 50px;
+  display: inline-block;
+  font-size: 0.8em;
+  font-weight: 600;
+  color: #b5b5b5;
+}
+
+.dailyHourLine{
+  height: 1px;
+  width: 100%;
+  transform: translateY(-50%);
+  top: 50%;
+  position: absolute;
+  background-color: #b5b5b5;
+}
+
+.dayEvent {
+  position: absolute;
+  box-sizing: border-box;
+  width: 100%;
+  z-index: 10;
+}
+
+.dayEventMultiple {
+  padding-right: 20px;
+}
+
+.allDayEvent {
+  min-height: 20px;
+  box-sizing: border-box;
+  margin: 10px 0;
+}

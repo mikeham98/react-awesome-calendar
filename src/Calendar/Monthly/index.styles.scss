@@ -1,0 +1,14 @@
+.calendarDayOfWeek {
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+/Edge */
+  user-select: none; /* Standard */
+  font-weight: 300;
+  div {
+    box-sizing: border-box;
+    text-align: right;
+    padding: 0 5px;
+    width: calc(100% / 7);
+    display: inline-block;
+  }
+}

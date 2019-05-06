@@ -1,37 +1,25 @@
 {
-  "name": "react-awesome-calendar",
-  "version": "0.0.5",
+  "name": "react-awesome-calendar-example",
+  "version": "0.0.1",
   "scripts": {
-    "start": "webpack --watch --mode production",
+    "start": "webpack-dev-server --mode development --open --watch",
     "build": "webpack --mode production",
-    "publishPackage": "npm run build && npm publish"
+    "fix-code": "prettier-eslint --write './src/**/*.{js,jsx}' ",
+    "fix-styles": "prettier-stylelint --write './src/**/*.{css,scss}' ",
+    "updateLink": "npm rm react-awesome-calendar -g && npm link react-awesome-calendar"
   },
-  "author": "Michael Hamilton",
-  "description": "An easy to use React Calendar component",
-  "homepage": "https://github.com/mikeham98/react-awesome-calendar",
-  "main": "build/index.js",
   "browserslist": [
     ">0.2%",
     "not dead",
     "not ie <= 11",
     "not op_mini all"
   ],
-  "peerDependencies": {
-    "react": "^16.7.0",
-    "react-dom": "^16.7.0"
-  },
-  "dependencies": {
-    "classnames": "^2.2.6",
-    "react": "^16.7.0",
-    "react-dom": "^16.7.0"
-  },
   "devDependencies": {
     "@babel/core": "^7.1.2",
     "@babel/polyfill": "^7.2.5",
     "@babel/preset-env": "^7.1.0",
     "@babel/preset-react": "^7.0.0",
     "babel-loader": "^8.0.4",
-    "clean-webpack-plugin": "^0.1.19",
     "css-loader": "^1.0.1",
     "eslint": "^5.7.0",
     "eslint-config-airbnb": "^17.1.0",
@@ -39,11 +27,9 @@
     "eslint-plugin-jsx-a11y": "^6.1.2",
     "eslint-plugin-react": "^7.11.1",
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
-    "file-loader": "^2.0.0",
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^3.2.0",
     "jwt-decode": "^2.2.0",
-    "mini-css-extract-plugin": "^0.4.4",
     "node-sass": "^4.9.4",
     "prettier": "1.14.3",
     "prettier-eslint": "^8.8.2",
@@ -55,7 +41,19 @@
     "unused-files-webpack-plugin": "^3.4.0",
     "webpack": "^4.23.1",
     "webpack-cli": "^3.1.2",
-    "webpack-md5-hash": "0.0.6",
-    "webpack-dev-server": "^3.1.10"
+    "webpack-dev-server": "^3.1.10",
+    "clean-webpack-plugin": "^0.1.19",
+    "file-loader": "^2.0.0",
+    "mini-css-extract-plugin": "^0.4.4"
+  },
+  "dependencies": {
+    "classnames": "^2.2.6",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0",
+    "react-redux": "^6.0.0",
+    "react-router-dom": "^4.3.1",
+    "url-loader": "^1.1.2",
+    "uuid": "^3.3.2",
+    "webpack-md5-hash": "0.0.6"
   }
 }

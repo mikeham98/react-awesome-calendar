@@ -1,0 +1,53 @@
+.dayCell {
+  display: inline-block;
+  box-sizing: border-box;
+  position: relative;
+  text-align: right;
+  overflow: hidden;
+  cursor: pointer;
+  width: calc(100% / 7);
+  height: 80px;
+  .dayDate {
+    display: block;
+    text-align: right;
+    padding: 3px;
+    position: relative;
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
+  }
+  .inactiveDay {
+    color: #b5b5b5;
+  }
+}
+
+.dayText {
+  display: inline-block;
+  position: relative;
+  height: 20px;
+  width: 20px;
+  line-height: 20px;
+  text-align: center;
+}
+
+.currentDay {
+  border-radius: 50%;
+  color: white;
+  background-color: #ff3e52;
+}
+
+.dayCellEventWrapper {
+  display: block;
+  text-align: left;
+}
+
+.dayEventsRemaining {
+  position: absolute;
+  font-size: 0.6em;
+  height: 16px;
+  line-height: 16px;
+  bottom: 0;
+  z-index: 10;
+  left: 0;
+}
