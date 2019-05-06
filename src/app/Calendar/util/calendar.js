@@ -1,143 +1,161 @@
-import {endPosition, middlePosition, startPosition} from "../constants";
-import {getDate} from "./date";
+import { endPosition, middlePosition, startPosition } from '../constants';
+import { getDate } from './date';
 
 let firstDayOfWeek = 0;
 let lastDayOfWeek = 6;
 
 const dateDiff = (start, end) => {
-    const timeDiff = Math.abs(end.getTime() - start.getTime());
-    return Math.ceil(timeDiff / (1000 * 3600 * 24));
+  const timeDiff = Math.abs(end.getTime() - start.getTime());
+  return Math.ceil(timeDiff / (1000 * 3600 * 24));
 };
 
-const getStartOfCalendar = (date) => {
-    let originalStartDate = new Date(date.getTime());
-    let actualStartDate = new Date(date.getTime());
+const getStartOfCalendar = date => {
+  let originalStartDate = new Date(date.getTime());
+  let actualStartDate = new Date(date.getTime());
 
-    if (originalStartDate.getDay() !== firstDayOfWeek) {
-        actualStartDate.setDate(originalStartDate.getDate() - originalStartDate.getDay() + firstDayOfWeek);
-    }
-    return actualStartDate;
+  if (originalStartDate.getDay() !== firstDayOfWeek) {
+    actualStartDate.setDate(
+      originalStartDate.getDate() - originalStartDate.getDay() + firstDayOfWeek
+    );
+  }
+  return actualStartDate;
 };
 
-const getEndOfCalendar = (date) => {
-    let originalEndDate = new Date(date.getTime());
-    let actualEndDate = new Date(date.getTime());
+const getEndOfCalendar = date => {
+  let originalEndDate = new Date(date.getTime());
+  let actualEndDate = new Date(date.getTime());
 
-    if (originalEndDate !== 7 - 1 - firstDayOfWeek) {
-        actualEndDate.setDate(originalEndDate.getDate() - originalEndDate.getDay() + lastDayOfWeek);
-    }
-    return actualEndDate;
-
+  if (originalEndDate !== 7 - 1 - firstDayOfWeek) {
+    actualEndDate.setDate(
+      originalEndDate.getDate() - originalEndDate.getDay() + lastDayOfWeek
+    );
+  }
+  return actualEndDate;
 };
 
 export const getCalendarMonth = (month, year) => {
-    let originalStartDate = new Date(year, month, 1);
-    let originalEndDate = new Date(year, month + 1, 0);
+  let originalStartDate = new Date(year, month, 1);
+  let originalEndDate = new Date(year, month + 1, 0);
 
-    let actualStartDate = getStartOfCalendar(originalStartDate);
-    let actualEndDate = getEndOfCalendar(originalEndDate);
+  let actualStartDate = getStartOfCalendar(originalStartDate);
+  let actualEndDate = getEndOfCalendar(originalEndDate);
 
-    let dayDifference = dateDiff(actualStartDate, actualEndDate);
+  let dayDifference = dateDiff(actualStartDate, actualEndDate);
 
-    let calendar = [];
+  let calendar = [];
 
-    for (let x = 0; x < dayDifference / 7; x++) {
-        let week = [];
-        for (let y = 0; y < 7; y++) {
-            let currentDate = new Date(actualStartDate.getTime());
-            currentDate.setDate(actualStartDate.getDate() + (x * 7) + y);
-            week.push({
-                current: currentDate.getMonth() === originalStartDate.getMonth(),
-                date: currentDate
-            });
-        }
-        calendar.push(week);
+  for (let x = 0; x < dayDifference / 7; x++) {
+    let week = [];
+    for (let y = 0; y < 7; y++) {
+      let currentDate = new Date(actualStartDate.getTime());
+      currentDate.setDate(actualStartDate.getDate() + x * 7 + y);
+      week.push({
+        current: currentDate.getMonth() === originalStartDate.getMonth(),
+        date: currentDate,
+      });
     }
-    return calendar;
+    calendar.push(week);
+  }
+  return calendar;
 };
 
-export const formatEvents = (events) => {
-    let formattedEvents = {};
-    if (Array.isArray(events) && events.length) {
-        events.forEach(event => {
-            const from = new Date(event.from);
-            const to = new Date(event.to);
-            const fromDate = getDate(from);
-            const toDate = getDate(to);
-            const fromDateAsTime = fromDate.getTime();
-            const toDateAsTime = toDate.getTime();
+export const formatEvents = events => {
+  let formattedEvents = {};
+  if (Array.isArray(events) && events.length) {
+    events.forEach(event => {
+      const from = new Date(event.from);
+      const to = new Date(event.to);
+      const fromDate = getDate(from);
+      const toDate = getDate(to);
+      const fromDateAsTime = fromDate.getTime();
+      const toDateAsTime = toDate.getTime();
 
-            // if the from date is the same as the to date
-            if (fromDateAsTime === toDateAsTime) {
-                if (!Array.isArray(formattedEvents[fromDateAsTime])) {
-                    formattedEvents[fromDateAsTime] = [];
-                }
-                formattedEvents[fromDateAsTime].push({
-                    ...event,
-                    date: from,
-                    from,
-                    to
-                });
-            } else {
-                const daySpan = dateDiff(from, to);
-
-                // loop over each day between the from - to date
-                for (let x = 0; x < daySpan; x++) {
-                    const dateIteration = new Date(fromDateAsTime);
-                    dateIteration.setDate(fromDate.getDate() + x);
-
-                    // work out whether the event is positioned first, middle or last
-                    let position;
-                    if (x === 0) {
-                        position = startPosition;
-                    } else if (x < daySpan - 1) {
-                        position = middlePosition
-                    } else {
-                        position = endPosition
-                    }
-
-                    const dateTime = dateIteration.getTime();
-                    if (!Array.isArray(formattedEvents[dateTime])) {
-                        formattedEvents[dateTime] = [];
-                    }
-                    formattedEvents[dateTime].push({
-                        ...event,
-                        spread: true,
-                        date: dateIteration,
-                        position
-                    });
-                }
-            }
+      // if the from date is the same as the to date
+      if (fromDateAsTime === toDateAsTime) {
+        if (!Array.isArray(formattedEvents[fromDateAsTime])) {
+          formattedEvents[fromDateAsTime] = [];
+        }
+        formattedEvents[fromDateAsTime].push({
+          ...event,
+          date: from,
+          from,
+          to,
         });
+      } else {
+        const daySpan = dateDiff(from, to);
 
-        // sort each event by date time
-        Object.keys(formattedEvents).forEach(date => {
-            formattedEvents[date] = formattedEvents[date].sort((a, b) => new Date(a.from) - new Date(b.from));
-        });
-    }
+        // loop over each day between the from - to date
+        for (let x = 0; x < daySpan; x++) {
+          const dateIteration = new Date(fromDateAsTime);
+          dateIteration.setDate(fromDate.getDate() + x);
 
-    return formattedEvents;
+          // work out whether the event is positioned first, middle or last
+          let position;
+          if (x === 0) {
+            position = startPosition;
+          } else if (x < daySpan - 1) {
+            position = middlePosition;
+          } else {
+            position = endPosition;
+          }
+
+          const dateTime = dateIteration.getTime();
+          if (!Array.isArray(formattedEvents[dateTime])) {
+            formattedEvents[dateTime] = [];
+          }
+          formattedEvents[dateTime].push({
+            ...event,
+            spread: true,
+            date: dateIteration,
+            position,
+          });
+        }
+      }
+    });
+
+    // sort each event by date time
+    Object.keys(formattedEvents).forEach(date => {
+      formattedEvents[date] = formattedEvents[date].sort(
+        (a, b) => new Date(a.from) - new Date(b.from)
+      );
+    });
+  }
+
+  return formattedEvents;
 };
 
 export const getEventsForCalendar = (events, calendar) => {
-    if (events && Object.keys(events)) {
-        return calendar.map(week => {
-            return week.map(day => {
-                let dayEvents;
-                if (events[day.date.getTime()]) {
-                    dayEvents = events[day.date.getTime()];
-                }
-                return {
-                    ...day,
-                    events: dayEvents
-                }
-            });
-        })
-    }
-    return calendar;
+  if (events && Object.keys(events)) {
+    return calendar.map(week => {
+      return week.map(day => {
+        let dayEvents;
+        if (events[day.date.getTime()]) {
+          dayEvents = events[day.date.getTime()];
+        }
+        return {
+          ...day,
+          events: dayEvents,
+        };
+      });
+    });
+  }
+  return calendar;
 };
 
-export const getMonthName = (month) => {
-    const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
-    return months[month];
+export const getMonthName = month => {
+  const months = [
+    'January',
+    'February',
+    'March',
+    'April',
+    'May',
+    'June',
+    'July',
+    'August',
+    'September',
+    'October',
+    'November',
+    'December',
+  ];
+  return months[month];
 };

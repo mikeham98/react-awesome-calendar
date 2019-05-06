@@ -5,7 +5,7 @@
   position: absolute;
 }
 
-.dailyTimeLine{
+.dailyTimeLine {
   position: absolute;
   width: calc(100% - 50px);
   margin-left: 50px;
@@ -17,8 +17,7 @@
   overflow-y: scroll;
 }
 
-
-.dailyHourWrapper{
+.dailyHourWrapper {
   height: 40px;
 }
 
@@ -37,7 +36,7 @@
   color: #b5b5b5;
 }
 
-.dailyHourLine{
+.dailyHourLine {
   height: 1px;
   width: 100%;
   transform: translateY(-50%);
