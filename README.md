@@ -1,7 +1,7 @@
 # 📅 React Awesome Calendar 🌈
 <div align="center">
   <a href="https://github.com/mikeham98/react-awesome-calendar">
-    <img width="250" height="250" src="./assets/react-awesome-calendar.svg">
+    <img width="250" height="250" src="https://raw.githubusercontent.com/mikeham98/react-awesome-calendar/master/assets/react-awesome-calendar.svg?sanitize=true">
   </a>
 </div>
 
