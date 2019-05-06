@@ -1,4 +1,4 @@
-# React Awesome Calendar 📅
+# 📅 React Awesome Calendar 🌈
 *react-awesome-calendar* is a library that allows you to easily add a calendar to your application. React Awesome Calendar also supports the ability to display events.
 
 ## Installation

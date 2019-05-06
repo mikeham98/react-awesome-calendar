@@ -6,6 +6,12 @@
     "build": "webpack --mode production",
     "publishPackage": "npm run build && npm publish"
   },
+  "keywords": [
+    "calendar",
+    "events",
+    "react",
+    "monthly"
+  ],
   "author": "Michael Hamilton",
   "description": "An easy to use React Calendar component",
   "homepage": "https://github.com/mikeham98/react-awesome-calendar",
