@@ -42,6 +42,11 @@ button {
 .modeButton {
   padding: 10px 20px;
   color: #202029;
+  transition-duration: 0.3s;
+}
+
+.modeButton:hover {
+  color: #ff3e52;
 }
 
 .modeButtonActive {

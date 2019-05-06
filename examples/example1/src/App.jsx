@@ -35,11 +35,23 @@ const events = [{
 }];
 
 class App extends React.Component {
+    constructor(props) {
+        super(props);
+        this.calendar = React.createRef();
+    }
+
+    componentDidMount() {
+        const details = this.calendar.current.getDetails();
+        // call get events endpoint
+    }
+
     render() {
         return (
             <div className={styles.pageCalendar}>
                 <Calendar
+                    ref={this.calendar}
                     onClickEvent={(event) => console.log('this is an event', event)}
+                    onChange={(dates) => console.log(dates)}
                     events={events}
                 />
             </div>

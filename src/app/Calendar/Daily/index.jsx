@@ -2,7 +2,6 @@ import React from 'react';
 import styles from './index.styles.scss';
 import {getElementHeight} from "../util/getElementHeight";
 import Event from "./Event";
-import {getDate, getTimeFromDate} from "../util/date";
 
 export default class Daily extends React.Component {
     componentDidMount() {

@@ -1,4 +1,4 @@
-# React Awesome Calendar 📅
+# 📅 React Awesome Calendar 🌈
 *react-awesome-calendar* is a library that allows you to easily add a calendar to your application. React Awesome Calendar also supports the ability to display events.
 
 ## Installation
@@ -60,14 +60,18 @@ class MyComponent extends React.Component {
 
 ```
 
-## Props
-|Name                   |Type         |Description         |Default Value       |
-|-----------------------|-------------|--------------------|--------------------|
-|events                 |array        |Events is an array that can be passed into the calendar and will render events on the Monthly and Daily view|undefined           |
-|onClickEvent           |function     |This function is called on click of an event on the daily mode     |undefined           |
-|header           |component     |This allows you to provide a custom header component for the calendar     |undefined           |
+## Calendar
+### Props
+#### Summary
+|Name                   |Type         |Description                                                                                                   |
+|-----------------------|-------------|--------------------------------------------------------------------------------------------------------------|
+|events                 |array        |Events is an array that can be passed into the calendar and will render events on the Monthly and Daily view  |
+|header                 |component    |This allows you to provide a custom header component for the calendar                                         |
+|onChange               |function     |This will be called every time the calendar changes date or mode                                              |
+|onClickEvent           |function     |This function is called on click of an event on the daily mode                                                |
+|ref                    |ref          |By passing in a ref it enables the ability to call methods on the Calendar class e.g. getDetails              |                         |
 
-### events
+#### events
 
 The events array prop has the following shape
 ```bash
@@ -79,15 +83,12 @@ The events array prop has the following shape
     title: (string) - name of event
 }
 ```
+I would recommend retrieving events on a per month basis to improve performance.
 
-### onClickEvent
-
-The onClickEvent prop is a function that will be called on click of an event on the Day mode of the calendar
-
-### header
+#### header
 If you wish to provide a customer header component you can pass in a prop which will override the header used by default. The following props will be passed into this component:
 
-#### props
+##### props
 
 ```bash
 {
@@ -109,5 +110,79 @@ If you wish to provide a customer header component you can pass in a prop which 
     },
     onClickPrev: function - this will change the calendar to the prev year, month, day depending on the mode
     onClickNext: function - this will change the calendar to the next year, month, day depending on the mode
+}
+```
+
+#### onChange
+The onChange prop is a function that will be called on change of the mode (year, month, day) or previous/next calendar. the mode, year, month, day values will be passed in.
+##### Example
+```bash
+(date) => {
+    console.log(date)
+    /* result (1st January 2019 viewed in the monthly calendar view)
+        {
+            mode: 'monthlyMode',
+            year: 2019,
+            month: 0,
+            day: 1
+        }
+    */
+}
+```
+
+#### onClickEvent
+The onClickEvent prop is a function that will be called on click of an event on the Day mode of the calendar. The event will be passed through to the function as an argument
+##### Example
+```bash
+(event) => {
+    console.log(event)
+    /* result
+        {
+            id: 1,
+            color: '#fd3153',
+            from: '2019-05-02T18:00:00+00:00',
+            to: '2019-05-05T19:00:00+00:00',
+            title: 'This is an event'
+        }
+    */
+}
+```
+
+#### ref
+Passing in a ref allows you to call methods on the Calendar class. A particularly useful method would be getDetails which return the current
+mode, year, month, day.
+##### Example
+```bash
+import React from 'react';
+import Calendar from "react-awesome-calendar";
+
+export default class Component extends React.Component {
+    constructor(props) {
+        super(props);
+        this.calendar = React.createRef();
+    }
+
+    componentDidMount() {
+        const details = this.calendar.current.getDetails();
+        console.log(details);
+        /* result
+            {
+                mode: 'monthlyMode',
+                year: 2019,
+                month: 0,
+                day: 1
+            }
+        */
+        // call endpoint to retrieve events
+    }
+
+    render() {
+        return (
+            <Calendar
+                ref={this.calendar}
+                events={this.props.events}
+            />
+        );
+    }
 }
 ```

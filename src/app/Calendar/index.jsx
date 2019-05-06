@@ -10,6 +10,10 @@ import Mode from "./Mode";
 import {formatEvents} from "./util/calendar";
 import {calendarDetails} from "./util/calendarDetails";
 
+//TODO: Upcoming features:
+//set beginning day of the week
+//be able to export Yearly, Monthly and Daily
+
 class Calendar extends React.PureComponent {
     constructor(props) {
         super(props);
@@ -25,6 +29,11 @@ class Calendar extends React.PureComponent {
         this.onClickMode = this.onClickMode.bind(this);
         this.onClickPrev = this.onClickPrev.bind(this);
         this.onClickNext = this.onClickNext.bind(this);
+    }
+
+    getDetails() {
+        const {mode, year, month, day} = this.state;
+        return {mode, year, month, day};
     }
 
     returnDailyEvents(events) {
@@ -71,32 +80,45 @@ class Calendar extends React.PureComponent {
             day,
             month,
             year
-        });
+        }, this.onChange);
     }
 
     onClickMonth(month) {
         this.setState({
             month,
             mode: monthlyMode
-        })
+        }, this.onChange)
     }
 
     onClickPrev() {
         const {mode, year, month, day} = this.state;
         const details = calendarDetails(mode, year, month, day);
-        this.setState({...details.prev});
+        this.setState({...details.prev}, this.onChange);
     }
 
     onClickNext() {
         const {mode, year, month, day} = this.state;
         const details = calendarDetails(mode, year, month, day);
-        this.setState({...details.next});
+        this.setState({...details.next}, this.onChange);
     }
 
     onClickMode(mode) {
+        let date = {};
+        if(mode === yearlyMode) {
+            date.year = this.state.year;
+            date.month = 0;
+            date.day = 1;
+        }
         this.setState({
-            mode
-        });
+            mode,
+            ...date
+        }, this.onChange);
+    }
+
+    onChange() {
+        if(this.props.onChange) {
+            this.props.onChange(this.getDetails());
+        }
     }
 
     returnHeader() {

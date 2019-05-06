@@ -5,6 +5,7 @@ src
 .eslintrc.js
 .gitignore
 .prettierrc
+enzymeSetup.js
 webpack.config.js
 yarn.lock
 assets
