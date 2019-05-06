@@ -3,8 +3,6 @@
 # dependencies
 /node_modules
 /.pnp
-/.idea
-.idea
 .pnp.js
 
 # testing
