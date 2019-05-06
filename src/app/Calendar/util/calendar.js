@@ -31,6 +31,7 @@ const getEndOfCalendar = (date) => {
 };
 
 export const getCalendarMonth = (month, year) => {
+    console.log(month);
     let originalStartDate = new Date(year, month, 1);
     let originalEndDate = new Date(year, month + 1, 0);
 

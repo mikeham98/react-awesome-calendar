@@ -1,0 +1,156 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`calendar getCalendarMonth should return a month from 28th April - 1st June 1`] = `
+Array [
+  Array [
+    Object {
+      "current": false,
+      "date": 2019-04-27T23:00:00.000Z,
+    },
+    Object {
+      "current": false,
+      "date": 2019-04-28T23:00:00.000Z,
+    },
+    Object {
+      "current": false,
+      "date": 2019-04-29T23:00:00.000Z,
+    },
+    Object {
+      "current": true,
+      "date": 2019-04-30T23:00:00.000Z,
+    },
+    Object {
+      "current": true,
+      "date": 2019-05-01T23:00:00.000Z,
+    },
+    Object {
+      "current": true,
+      "date": 2019-05-02T23:00:00.000Z,
+    },
+    Object {
+      "current": true,
+      "date": 2019-05-03T23:00:00.000Z,
+    },
+  ],
+  Array [
+    Object {
+      "current": true,
+      "date": 2019-05-04T23:00:00.000Z,
+    },
+    Object {
+      "current": true,
+      "date": 2019-05-05T23:00:00.000Z,
+    },
+    Object {
+      "current": true,
+      "date": 2019-05-06T23:00:00.000Z,
+    },
+    Object {
+      "current": true,
+      "date": 2019-05-07T23:00:00.000Z,
+    },
+    Object {
+      "current": true,
+      "date": 2019-05-08T23:00:00.000Z,
+    },
+    Object {
+      "current": true,
+      "date": 2019-05-09T23:00:00.000Z,
+    },
+    Object {
+      "current": true,
+      "date": 2019-05-10T23:00:00.000Z,
+    },
+  ],
+  Array [
+    Object {
+      "current": true,
+      "date": 2019-05-11T23:00:00.000Z,
+    },
+    Object {
+      "current": true,
+      "date": 2019-05-12T23:00:00.000Z,
+    },
+    Object {
+      "current": true,
+      "date": 2019-05-13T23:00:00.000Z,
+    },
+    Object {
+      "current": true,
+      "date": 2019-05-14T23:00:00.000Z,
+    },
+    Object {
+      "current": true,
+      "date": 2019-05-15T23:00:00.000Z,
+    },
+    Object {
+      "current": true,
+      "date": 2019-05-16T23:00:00.000Z,
+    },
+    Object {
+      "current": true,
+      "date": 2019-05-17T23:00:00.000Z,
+    },
+  ],
+  Array [
+    Object {
+      "current": true,
+      "date": 2019-05-18T23:00:00.000Z,
+    },
+    Object {
+      "current": true,
+      "date": 2019-05-19T23:00:00.000Z,
+    },
+    Object {
+      "current": true,
+      "date": 2019-05-20T23:00:00.000Z,
+    },
+    Object {
+      "current": true,
+      "date": 2019-05-21T23:00:00.000Z,
+    },
+    Object {
+      "current": true,
+      "date": 2019-05-22T23:00:00.000Z,
+    },
+    Object {
+      "current": true,
+      "date": 2019-05-23T23:00:00.000Z,
+    },
+    Object {
+      "current": true,
+      "date": 2019-05-24T23:00:00.000Z,
+    },
+  ],
+  Array [
+    Object {
+      "current": true,
+      "date": 2019-05-25T23:00:00.000Z,
+    },
+    Object {
+      "current": true,
+      "date": 2019-05-26T23:00:00.000Z,
+    },
+    Object {
+      "current": true,
+      "date": 2019-05-27T23:00:00.000Z,
+    },
+    Object {
+      "current": true,
+      "date": 2019-05-28T23:00:00.000Z,
+    },
+    Object {
+      "current": true,
+      "date": 2019-05-29T23:00:00.000Z,
+    },
+    Object {
+      "current": true,
+      "date": 2019-05-30T23:00:00.000Z,
+    },
+    Object {
+      "current": false,
+      "date": 2019-05-31T23:00:00.000Z,
+    },
+  ],
+]
+`;
