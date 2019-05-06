@@ -59,6 +59,8 @@ class Calendar extends React.PureComponent {
                         year={this.state.year}
                         events={events}
                         onClickDay={this.onClickDay}
+                        onClickPrev={this.onClickPrev}
+                        onClickNext={this.onClickNext}
                     />
                 );
             case dailyMode:
