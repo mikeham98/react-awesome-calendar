@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/calendar.iml" filepath="$PROJECT_DIR$/.idea/calendar.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/react-awesome-calendar.iml" filepath="$PROJECT_DIR$/.idea/react-awesome-calendar.iml" />
     </modules>
   </component>
 </project>

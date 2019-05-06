@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="11f64a0a-dda6-48e3-81a5-557abe0a870b" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/Calendar/Monthly/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Calendar/Monthly/index.jsx" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -16,59 +16,60 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/README.md">
+      <file leaf-file-name="calendar.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/Calendar/util/calendar.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="156">
-              <caret line="179" column="16" lean-forward="true" selection-start-line="179" selection-start-column="16" selection-end-line="179" selection-end-column="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="App.jsx" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/examples/example1/src/App.jsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="206">
-              <caret line="31" column="36" selection-start-line="31" selection-start-column="36" selection-end-line="31" selection-end-column="36" />
+            <state relative-caret-position="312">
+              <caret line="44" column="49" lean-forward="true" selection-start-line="44" selection-start-column="49" selection-end-line="44" selection-end-column="49" />
               <folding>
-                <element signature="e#0#26#0" expanded="true" />
+                <element signature="e#0#72#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="package.json" pinned="false" current-in-tab="true">
+      <file leaf-file-name="calendar.test.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/__tests__/Calendar/util/calendar.test.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="7" column="62" lean-forward="true" selection-start-line="7" selection-start-column="62" selection-end-line="7" selection-end-column="62" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="calendar.test.js.snap" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/__tests__/Calendar/util/__snapshots__/calendar.test.js.snap">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="19" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
+            <state relative-caret-position="300">
+              <caret line="20" column="68" lean-forward="true" selection-start-line="20" selection-start-column="68" selection-end-line="20" selection-end-column="68" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/index.js">
+      <file leaf-file-name="calendarDetails.test.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/__tests__/Calendar/util/calendarDetails.test.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="20" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
+            <state relative-caret-position="125">
+              <caret line="34" column="35" selection-start-line="34" selection-start-column="35" selection-end-line="34" selection-end-column="35" />
+              <folding>
+                <element signature="e#0#77#0" expanded="true" />
+                <element signature="e#1502#2693#0" />
+                <element signature="e#2888#3354#0" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".babelrc" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.babelrc">
+      <file leaf-file-name="getElementHeight.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/Calendar/util/getElementHeight.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="1" lean-forward="true" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name=".npmignore" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.npmignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+            <state relative-caret-position="60">
+              <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
             </state>
           </provider>
         </entry>
@@ -76,11 +77,44 @@
       <file leaf-file-name="index.jsx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/app/Calendar/index.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="56">
-              <caret line="48" column="22" lean-forward="true" selection-start-line="48" selection-start-column="22" selection-end-line="48" selection-end-column="22" />
+            <state relative-caret-position="156">
+              <caret line="49" column="24" lean-forward="true" selection-start-line="49" selection-start-column="24" selection-end-line="49" selection-end-column="24" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.jsx" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/Calendar/Yearly/index.jsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="216">
+              <caret line="16" column="31" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.jsx" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/app/Calendar/Monthly/index.jsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="156">
+              <caret line="39" column="23" lean-forward="true" selection-start-line="39" selection-start-column="23" selection-end-line="39" selection-end-column="23" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="date.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/Calendar/util/date.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="6" column="28" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -89,10 +123,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>returnDailyEvents</find>
-      <find>hourHeight</find>
-      <find>onClickPrev</find>
-      <find>dailyHour</find>
       <find>dailyEventList</find>
       <find>dailyHourLineWrapper</find>
       <find>alreadyDoneTest</find>
@@ -119,6 +149,10 @@
       <find>getDeta</find>
       <find>|header           |component     |This allows you to provide a custom header component for the calendar     |undefined           |</find>
       <find>##</find>
+      <find>jest-clin</find>
+      <find>Object</find>
+      <find>onClickNext</find>
+      <find>onClickDay</find>
     </findStrings>
     <replaceStrings>
       <replace>originalEndDate</replace>
@@ -157,11 +191,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/app/Calendar/util/getElementHeight.js" />
-        <option value="$PROJECT_DIR$/src/app/Calendar/Monthly/Day.styles.scss" />
-        <option value="$PROJECT_DIR$/src/app/Calendar/Daily/Event.scss" />
-        <option value="$PROJECT_DIR$/src/app/Calendar/Daily/index.scss" />
-        <option value="$PROJECT_DIR$/src/app/Calendar/util/prevNextCalendar.js" />
         <option value="$PROJECT_DIR$/src/app/Calendar/Yearly/index.scss" />
         <option value="$PROJECT_DIR$/src/themes/app.scss" />
         <option value="$PROJECT_DIR$/src/app/Calendar/Monthly/index.scss" />
@@ -169,8 +198,6 @@
         <option value="$PROJECT_DIR$/src/app/Calendar/Header.jsx" />
         <option value="$PROJECT_DIR$/src/app/Calendar/index.styles.scss" />
         <option value="$PROJECT_DIR$/src/app/Calendar/Mode.jsx" />
-        <option value="$PROJECT_DIR$/src/app/Calendar/Monthly/index.jsx" />
-        <option value="$PROJECT_DIR$/src/app/Calendar/util/date.js" />
         <option value="$PROJECT_DIR$/src/app/Calendar/Daily/index.jsx" />
         <option value="$PROJECT_DIR$/src/app/Calendar/Daily/Event.jsx" />
         <option value="$PROJECT_DIR$/src/app/Calendar/Daily/index.styles.scss" />
@@ -190,7 +217,6 @@
         <option value="$PROJECT_DIR$/src/Calendar/Monthly/Day.jsx" />
         <option value="$PROJECT_DIR$/src/Calendar/Monthly/Event.styles.scss" />
         <option value="$PROJECT_DIR$/src/Calendar/Monthly/Day.styles.scss" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/Calendar/index.styles.scss" />
         <option value="$PROJECT_DIR$/src/Calendar/Daily/index.jsx" />
         <option value="$PROJECT_DIR$/src/Calendar/index.jsx" />
@@ -200,14 +226,22 @@
         <option value="$PROJECT_DIR$/babel.config.js" />
         <option value="$PROJECT_DIR$/src/__tests__/index.test.js" />
         <option value="$PROJECT_DIR$/webpack.config.js" />
-        <option value="$PROJECT_DIR$/src/__tests__/Calendar/util/date.test.js" />
-        <option value="$PROJECT_DIR$/.babelrc" />
         <option value="$PROJECT_DIR$/src/app/Calendar/util/calendarDetails.js" />
-        <option value="$PROJECT_DIR$/src/app/Calendar/index.jsx" />
         <option value="$PROJECT_DIR$/examples/example1/src/App.jsx" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/.babelrc" />
+        <option value="$PROJECT_DIR$/.eslintrc.js" />
         <option value="$PROJECT_DIR$/.npmignore" />
+        <option value="$PROJECT_DIR$/src/app/Calendar/util/date.js" />
+        <option value="$PROJECT_DIR$/src/__tests__/Calendar/util/date.test.js" />
+        <option value="$PROJECT_DIR$/src/__tests__/Calendar/util/calendarDetails.test.js" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/src/__tests__/Calendar/util/calendar.test.js" />
+        <option value="$PROJECT_DIR$/src/app/Calendar/util/calendar.js" />
+        <option value="$PROJECT_DIR$/src/__tests__/Calendar/util/__snapshots__/calendar.test.js.snap" />
+        <option value="$PROJECT_DIR$/src/app/Calendar/index.jsx" />
         <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/src/app/Calendar/Monthly/index.jsx" />
       </list>
     </option>
   </component>
@@ -233,9 +267,9 @@
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="404" />
+    <option name="x" value="310" />
     <option name="y" value="23" />
-    <option name="width" value="1337" />
+    <option name="width" value="1130" />
     <option name="height" value="825" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -244,7 +278,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -255,32 +288,69 @@
             <path>
               <item name="react-awesome-calendar" type="b2602c69:ProjectViewProjectNode" />
               <item name="react-awesome-calendar" type="462c0819:PsiDirectoryNode" />
-              <item name="examples" type="462c0819:PsiDirectoryNode" />
+              <item name="coverage" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="react-awesome-calendar" type="b2602c69:ProjectViewProjectNode" />
               <item name="react-awesome-calendar" type="462c0819:PsiDirectoryNode" />
-              <item name="examples" type="462c0819:PsiDirectoryNode" />
-              <item name="example1" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="react-awesome-calendar" type="b2602c69:ProjectViewProjectNode" />
-              <item name="react-awesome-calendar" type="462c0819:PsiDirectoryNode" />
-              <item name="examples" type="462c0819:PsiDirectoryNode" />
-              <item name="example1" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="react-awesome-calendar" type="b2602c69:ProjectViewProjectNode" />
-              <item name="react-awesome-calendar" type="462c0819:PsiDirectoryNode" />
-              <item name="examples" type="462c0819:PsiDirectoryNode" />
-              <item name="example1" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="react-awesome-calendar" type="b2602c69:ProjectViewProjectNode" />
+              <item name="react-awesome-calendar" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="__tests__" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="react-awesome-calendar" type="b2602c69:ProjectViewProjectNode" />
+              <item name="react-awesome-calendar" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="__tests__" type="462c0819:PsiDirectoryNode" />
+              <item name="Calendar" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="react-awesome-calendar" type="b2602c69:ProjectViewProjectNode" />
+              <item name="react-awesome-calendar" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="__tests__" type="462c0819:PsiDirectoryNode" />
+              <item name="Calendar" type="462c0819:PsiDirectoryNode" />
+              <item name="util" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="react-awesome-calendar" type="b2602c69:ProjectViewProjectNode" />
+              <item name="react-awesome-calendar" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="__tests__" type="462c0819:PsiDirectoryNode" />
+              <item name="Calendar" type="462c0819:PsiDirectoryNode" />
+              <item name="util" type="462c0819:PsiDirectoryNode" />
+              <item name="__snapshots__" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="react-awesome-calendar" type="b2602c69:ProjectViewProjectNode" />
+              <item name="react-awesome-calendar" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="react-awesome-calendar" type="b2602c69:ProjectViewProjectNode" />
+              <item name="react-awesome-calendar" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Calendar" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="react-awesome-calendar" type="b2602c69:ProjectViewProjectNode" />
+              <item name="react-awesome-calendar" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Calendar" type="462c0819:PsiDirectoryNode" />
+              <item name="util" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -303,21 +373,21 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="yarn" />
-    <property name="settings.editor.selected.configurable" value="watcher.settings" />
+    <property name="settings.editor.selected.configurable" value="settings.webpack" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/__tests__/Calendar/util" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/examples/app" />
+      <recent name="$PROJECT_DIR$/examples" />
+      <recent name="$PROJECT_DIR$/src/app/Calendar/Daily" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/app" />
       <recent name="$PROJECT_DIR$/examples/example1" />
       <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/examples/example1/src" />
-      <recent name="$PROJECT_DIR$/src/app/Calendar/Monthly" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/examples/app" />
-      <recent name="$PROJECT_DIR$/examples" />
-      <recent name="$PROJECT_DIR$/src/app/Calendar/Daily" />
       <recent name="$PROJECT_DIR$/src/app/Calendar/Monthly" />
     </key>
   </component>
@@ -333,76 +403,84 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Jest.date">
-    <configuration name="date" type="JavaScriptTestRunnerJest" factoryName="Jest" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Jest.calendar.getCalendarMonth.should return a month from 28th April - 1st June">
+    <configuration name="calendarDetails" type="JavaScriptTestRunnerJest" factoryName="Jest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
-      <working-dir value="$PROJECT_DIR$/src/__tests__/Calendar/util" />
+      <working-dir value="$PROJECT_DIR$/" />
       <envs />
       <scope-kind value="SUITE" />
-      <test-file value="$PROJECT_DIR$/src/__tests__/Calendar/util/date.test.js" />
+      <test-file value="$PROJECT_DIR$/src/__tests__/Calendar/util/calendarDetails.test.js" />
       <test-names>
-        <test-name value="date" />
+        <test-name value="calendarDetails" />
       </test-names>
     </configuration>
-    <configuration name="date.getDate.should return a date without the time" type="JavaScriptTestRunnerJest" factoryName="Jest" temporary="true" nameIsGenerated="true">
+    <configuration name="calendarDetails.dailyMode.should return current (2018, 5, 30), prev (2018, 5, 29) and next (2019, 6, 1)" type="JavaScriptTestRunnerJest" factoryName="Jest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
-      <working-dir value="$PROJECT_DIR$/src/__tests__/Calendar/util" />
+      <working-dir value="$PROJECT_DIR$/" />
       <envs />
       <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/src/__tests__/Calendar/util/date.test.js" />
+      <test-file value="$PROJECT_DIR$/src/__tests__/Calendar/util/calendarDetails.test.js" />
       <test-names>
-        <test-name value="date" />
-        <test-name value="getDate" />
-        <test-name value="should return a date without the time" />
+        <test-name value="calendarDetails" />
+        <test-name value="dailyMode" />
+        <test-name value="should return current (2018, 5, 30), prev (2018, 5, 29) and next (2019, 6, 1)" />
       </test-names>
     </configuration>
-    <configuration name="hello" type="JavaScriptTestRunnerJest" factoryName="Jest" temporary="true" nameIsGenerated="true">
+    <configuration name="calendarDetails.dailyMode.should return current (2019, 0, 1), prev (2018, 11, 31) and next (2019, 0, 2)" type="JavaScriptTestRunnerJest" factoryName="Jest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
-      <working-dir value="$PROJECT_DIR$/src/__tests__" />
-      <envs />
-      <scope-kind value="SUITE" />
-      <test-file value="$PROJECT_DIR$/src/__tests__/index.test.js" />
-      <test-names>
-        <test-name value="hello" />
-      </test-names>
-    </configuration>
-    <configuration name="hello.should do something" type="JavaScriptTestRunnerJest" factoryName="Jest" temporary="true" nameIsGenerated="true">
-      <node-interpreter value="project" />
-      <node-options value="" />
-      <working-dir value="$PROJECT_DIR$/src/__tests__" />
+      <working-dir value="$PROJECT_DIR$/" />
       <envs />
       <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/src/__tests__/index.test.js" />
+      <test-file value="$PROJECT_DIR$/src/__tests__/Calendar/util/calendarDetails.test.js" />
       <test-names>
-        <test-name value="hello" />
-        <test-name value="should do something" />
+        <test-name value="calendarDetails" />
+        <test-name value="dailyMode" />
+        <test-name value="should return current (2019, 0, 1), prev (2018, 11, 31) and next (2019, 0, 2)" />
       </test-names>
     </configuration>
-    <configuration name="index.test.js" type="JavaScriptTestRunnerJest" factoryName="Jest" temporary="true" nameIsGenerated="true">
+    <configuration name="calendarDetails.yearlyMode.should return current (2019, 0, 1), prev (2018, 0, 1) and next (2020, 1, 1)" type="JavaScriptTestRunnerJest" factoryName="Jest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
-      <working-dir value="$PROJECT_DIR$/src/__tests__" />
+      <working-dir value="$PROJECT_DIR$/" />
       <envs />
-      <scope-kind value="TEST_FILE" />
-      <test-file value="$PROJECT_DIR$/src/__tests__/index.test.js" />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/src/__tests__/Calendar/util/calendarDetails.test.js" />
+      <test-names>
+        <test-name value="calendarDetails" />
+        <test-name value="yearlyMode" />
+        <test-name value="should return current (2019, 0, 1), prev (2018, 0, 1) and next (2020, 1, 1)" />
+      </test-names>
+    </configuration>
+    <configuration name="calendar.getCalendarMonth.should return a month from 28th April - 1st June" type="JavaScriptTestRunnerJest" factoryName="Jest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <working-dir value="$PROJECT_DIR$/" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/src/__tests__/Calendar/util/calendar.test.js" />
+      <test-names>
+        <test-name value="calendar" />
+        <test-name value="getCalendarMonth" />
+        <test-name value="should return a month from 28th April - 1st June" />
+      </test-names>
     </configuration>
     <list>
-      <item itemvalue="Jest.hello.should do something" />
-      <item itemvalue="Jest.index.test.js" />
-      <item itemvalue="Jest.hello" />
-      <item itemvalue="Jest.date.getDate.should return a date without the time" />
-      <item itemvalue="Jest.date" />
+      <item itemvalue="Jest.calendarDetails.dailyMode.should return current (2019, 0, 1), prev (2018, 11, 31) and next (2019, 0, 2)" />
+      <item itemvalue="Jest.calendarDetails.dailyMode.should return current (2018, 5, 30), prev (2018, 5, 29) and next (2019, 6, 1)" />
+      <item itemvalue="Jest.calendarDetails.yearlyMode.should return current (2019, 0, 1), prev (2018, 0, 1) and next (2020, 1, 1)" />
+      <item itemvalue="Jest.calendarDetails" />
+      <item itemvalue="Jest.calendar.getCalendarMonth.should return a month from 28th April - 1st June" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Jest.date" />
-        <item itemvalue="Jest.date.getDate.should return a date without the time" />
-        <item itemvalue="Jest.hello.should do something" />
-        <item itemvalue="Jest.hello" />
-        <item itemvalue="Jest.index.test.js" />
+        <item itemvalue="Jest.calendar.getCalendarMonth.should return a month from 28th April - 1st June" />
+        <item itemvalue="Jest.calendarDetails" />
+        <item itemvalue="Jest.calendarDetails.yearlyMode.should return current (2019, 0, 1), prev (2018, 0, 1) and next (2020, 1, 1)" />
+        <item itemvalue="Jest.calendarDetails.dailyMode.should return current (2018, 5, 30), prev (2018, 5, 29) and next (2019, 6, 1)" />
+        <item itemvalue="Jest.calendarDetails.dailyMode.should return current (2019, 0, 1), prev (2018, 11, 31) and next (2019, 0, 2)" />
       </list>
     </recent_temporary>
   </component>
@@ -432,58 +510,59 @@
       <workItem from="1557055206588" duration="8916000" />
       <workItem from="1557087222933" duration="1831000" />
       <workItem from="1557089102434" duration="18137000" />
-      <workItem from="1557144310869" duration="2823000" />
+      <workItem from="1557144310869" duration="2982000" />
+      <workItem from="1557147497071" duration="1141000" />
+      <workItem from="1557148694121" duration="3557000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="date_getDate_should_return_a_date_without_the_time - 2019.05.06 at 02h 52m 58s.xml">
-      <configuration name="date.getDate.should return a date without the time" configurationId="JavaScriptTestRunnerJest" />
+    <history-entry file="calendarDetails_yearlyMode_should_return_current_(2019,_0,_1),_prev_(2018,_0,_1)_and_next_(2020,_1,_1) - 2019.05.06 at 15h 39m 01s.xml">
+      <configuration name="calendarDetails.yearlyMode.should return current (2019, 0, 1), prev (2018, 0, 1) and next (2020, 1, 1)" configurationId="JavaScriptTestRunnerJest" />
     </history-entry>
-    <history-entry file="date_getDate_should_return_a_date_without_the_time - 2019.05.06 at 02h 53m 11s.xml">
-      <configuration name="date.getDate.should return a date without the time" configurationId="JavaScriptTestRunnerJest" />
+    <history-entry file="calendarDetails - 2019.05.06 at 15h 39m 53s.xml">
+      <configuration name="calendarDetails" configurationId="JavaScriptTestRunnerJest" />
     </history-entry>
-    <history-entry file="date_getDate_should_return_a_date_without_the_time - 2019.05.06 at 02h 56m 03s.xml">
-      <configuration name="date.getDate.should return a date without the time" configurationId="JavaScriptTestRunnerJest" />
+    <history-entry file="calendarDetails - 2019.05.06 at 15h 40m 26s.xml">
+      <configuration name="calendarDetails" configurationId="JavaScriptTestRunnerJest" />
     </history-entry>
-    <history-entry file="date_getDate_should_return_a_date_without_the_time - 2019.05.06 at 02h 56m 57s.xml">
-      <configuration name="date.getDate.should return a date without the time" configurationId="JavaScriptTestRunnerJest" />
+    <history-entry file="calendar_getCalendarMonth_should_return_a_month_from_28th_April_-_1st_June - 2019.05.06 at 15h 48m 14s.xml">
+      <configuration name="calendar.getCalendarMonth.should return a month from 28th April - 1st June" configurationId="JavaScriptTestRunnerJest" />
     </history-entry>
-    <history-entry file="date_getDate_should_return_a_date_without_the_time - 2019.05.06 at 02h 57m 08s.xml">
-      <configuration name="date.getDate.should return a date without the time" configurationId="JavaScriptTestRunnerJest" />
+    <history-entry file="calendar_getCalendarMonth_should_return_a_month_from_28th_April_-_1st_June - 2019.05.06 at 15h 49m 29s.xml">
+      <configuration name="calendar.getCalendarMonth.should return a month from 28th April - 1st June" configurationId="JavaScriptTestRunnerJest" />
     </history-entry>
-    <history-entry file="date_getDate_should_return_a_date_without_the_time - 2019.05.06 at 02h 59m 04s.xml">
-      <configuration name="date.getDate.should return a date without the time" configurationId="JavaScriptTestRunnerJest" />
+    <history-entry file="calendar_getCalendarMonth_should_return_a_month_from_28th_April_-_1st_June - 2019.05.06 at 15h 51m 39s.xml">
+      <configuration name="calendar.getCalendarMonth.should return a month from 28th April - 1st June" configurationId="JavaScriptTestRunnerJest" />
     </history-entry>
-    <history-entry file="date_getDate_should_return_a_date_without_the_time - 2019.05.06 at 02h 59m 31s.xml">
-      <configuration name="date.getDate.should return a date without the time" configurationId="JavaScriptTestRunnerJest" />
+    <history-entry file="calendar_getCalendarMonth_should_return_a_month_from_28th_April_-_1st_June - 2019.05.06 at 15h 52m 03s.xml">
+      <configuration name="calendar.getCalendarMonth.should return a month from 28th April - 1st June" configurationId="JavaScriptTestRunnerJest" />
     </history-entry>
-    <history-entry file="date - 2019.05.06 at 03h 01m 42s.xml">
-      <configuration name="date" configurationId="JavaScriptTestRunnerJest" />
+    <history-entry file="calendar_getCalendarMonth_should_return_a_month_from_28th_April_-_1st_June - 2019.05.06 at 15h 52m 31s.xml">
+      <configuration name="calendar.getCalendarMonth.should return a month from 28th April - 1st June" configurationId="JavaScriptTestRunnerJest" />
     </history-entry>
-    <history-entry file="date - 2019.05.06 at 03h 02m 23s.xml">
-      <configuration name="date" configurationId="JavaScriptTestRunnerJest" />
+    <history-entry file="calendar_getCalendarMonth_should_return_a_month_from_28th_April_-_1st_June - 2019.05.06 at 15h 52m 57s.xml">
+      <configuration name="calendar.getCalendarMonth.should return a month from 28th April - 1st June" configurationId="JavaScriptTestRunnerJest" />
     </history-entry>
-    <history-entry file="date - 2019.05.06 at 03h 03m 22s.xml">
-      <configuration name="date" configurationId="JavaScriptTestRunnerJest" />
+    <history-entry file="calendar_getCalendarMonth_should_return_a_month_from_28th_April_-_1st_June - 2019.05.06 at 15h 53m 41s.xml">
+      <configuration name="calendar.getCalendarMonth.should return a month from 28th April - 1st June" configurationId="JavaScriptTestRunnerJest" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="96736000" />
+    <option name="totallyTimeSpent" value="101593000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="404" y="23" width="1337" height="825" extended-state="0" />
+    <frame x="310" y="23" width="1130" height="825" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49838188" visible="true" weight="0.14435303" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49838188" visible="true" weight="0.22272317" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5014006" side_tool="true" weight="0.3276699" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.3288948" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32356858" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.38873628" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32921812" />
       <window_info id="Structure" order="1" sideWeight="0.50161815" side_tool="true" weight="0.5053111" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" sideWeight="0.49859944" visible="true" weight="0.40479362" />
+      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49859944" visible="true" weight="0.41758242" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -493,6 +572,7 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3288948" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -507,53 +587,11 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="645">
-          <caret line="43" column="36" lean-forward="true" selection-start-line="43" selection-start-column="36" selection-end-line="43" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/examples/example1/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="34" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="47" selection-start-column="47" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/Calendar/util/date.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="20" selection-start-column="13" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.babelrc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="5" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/react-big-calendar/dist/react-big-calendar.esm.js" />
     <entry file="file://$PROJECT_DIR$/examples/example1/public/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="8" column="8" lean-forward="true" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/Calendar/util/getElementHeight.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="28" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="28" />
         </state>
       </provider>
     </entry>
@@ -592,16 +630,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="6" column="117" selection-start-line="6" selection-start-column="117" selection-end-line="6" selection-end-column="117" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/Calendar/Yearly/index.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="29" column="44" selection-start-line="29" selection-start-column="44" selection-end-line="29" selection-end-column="44" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -671,9 +699,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="112">
           <caret line="22" column="23" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="23" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -702,16 +727,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="382">
           <caret line="112" column="13" selection-start-line="112" selection-start-column="13" selection-end-line="112" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="1" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -719,16 +734,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
           <caret line="44" column="27" selection-start-line="44" selection-start-column="27" selection-end-line="44" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/Calendar/Monthly/index.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="81">
-          <caret line="12" column="23" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -748,23 +753,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="20" column="13" lean-forward="true" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/Calendar/util/calendar.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="116" column="5" selection-start-line="116" selection-start-column="5" selection-end-line="116" selection-end-column="5" />
-          <folding>
-            <element signature="e#0#72#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/Calendar/util/date.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="20" selection-start-column="13" selection-end-column="20" />
         </state>
       </provider>
     </entry>
@@ -789,13 +777,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/__tests__/Calendar/util/date.test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="12" column="3" selection-start-line="12" selection-start-column="3" selection-end-line="12" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/enzymeSetup.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
@@ -803,33 +784,54 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/Calendar/util/calendarDetails.js">
+    <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="39" column="33" lean-forward="true" selection-start-line="39" selection-start-column="33" selection-end-line="39" selection-end-column="33" />
+        <state relative-caret-position="2685">
+          <caret line="179" column="16" selection-start-line="179" selection-start-column="16" selection-end-line="179" selection-end-column="16" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
+        <state>
           <caret line="2" column="20" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/Calendar/index.jsx">
+    <entry file="file://$PROJECT_DIR$/.babelrc">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="56">
-          <caret line="48" column="22" lean-forward="true" selection-start-line="48" selection-start-column="22" selection-end-line="48" selection-end-column="22" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="75">
+          <caret line="5" column="1" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.eslintrc.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="2" selection-start-line="6" selection-start-column="2" selection-end-line="6" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/__tests__/Calendar/util/__snapshots__/date.test.js.snap">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.npmignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" selection-start-line="12" selection-end-line="12" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/__tests__/Calendar/util/date.test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="47" selection-start-line="16" selection-start-column="47" selection-end-line="16" selection-end-column="47" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/examples/example1/src/App.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
+        <state relative-caret-position="465">
           <caret line="31" column="36" selection-start-line="31" selection-start-column="36" selection-end-line="31" selection-end-column="36" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
@@ -837,31 +839,100 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
+    <entry file="file://$PROJECT_DIR$/src/app/Calendar/util/calendarDetails.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="179" column="16" lean-forward="true" selection-start-line="179" selection-start-column="16" selection-end-line="179" selection-end-column="16" />
+        <state relative-caret-position="-62">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.babelrc">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="1" lean-forward="true" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+        <state relative-caret-position="240">
+          <caret line="16" column="9" lean-forward="true" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.npmignore">
+    <entry file="file://$PROJECT_DIR$/src/__tests__/Calendar/util/calendarDetails.test.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+        <state relative-caret-position="125">
+          <caret line="34" column="35" selection-start-line="34" selection-start-column="35" selection-end-line="34" selection-end-column="35" />
+          <folding>
+            <element signature="e#0#77#0" expanded="true" />
+            <element signature="e#1502#2693#0" />
+            <element signature="e#2888#3354#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/Calendar/util/getElementHeight.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/Calendar/util/date.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="28" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/Calendar/util/calendar.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="44" column="49" lean-forward="true" selection-start-line="44" selection-start-column="49" selection-end-line="44" selection-end-column="49" />
+          <folding>
+            <element signature="e#0#72#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/__tests__/Calendar/util/__snapshots__/calendar.test.js.snap">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/__tests__/Calendar/util/calendar.test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="7" column="62" lean-forward="true" selection-start-line="7" selection-start-column="62" selection-end-line="7" selection-end-column="62" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="19" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
+        <state relative-caret-position="300">
+          <caret line="20" column="68" lean-forward="true" selection-start-line="20" selection-start-column="68" selection-end-line="20" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/Calendar/index.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="49" column="24" lean-forward="true" selection-start-line="49" selection-start-column="24" selection-end-line="49" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/Calendar/Yearly/index.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="16" column="31" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/Calendar/Monthly/index.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="39" column="23" lean-forward="true" selection-start-line="39" selection-start-column="23" selection-end-line="39" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
