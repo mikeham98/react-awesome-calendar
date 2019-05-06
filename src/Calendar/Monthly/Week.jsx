@@ -25,7 +25,7 @@ export default class Week extends React.PureComponent {
                         date={day.date}
                         current={day.current}
                         events={day.events}
-                        onClickEvent={this.props.onClickEvent}
+                        // onClickEvent={this.props.onClickEvent}
                         onClickDay={() => this.onClickDay(day)}
                     />
                 );

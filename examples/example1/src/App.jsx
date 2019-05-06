@@ -7,43 +7,31 @@ const events = [{
     color: '#fd3153',
     from: '2019-05-02T18:00:00+00:00',
     to: '2019-05-05T19:00:00+00:00',
-    title: 'This is a long event'
+    title: 'Seeing family'
 }, {
     id: 2,
     color: '#1ccb9e',
     from: '2019-05-01T13:00:00+00:00',
     to: '2019-05-05T14:00:00+00:00',
-    title: 'This is another title'
+    title: 'Holiday'
 }, {
     id: 3,
-    color: '#3694DF',
-    from: '2019-05-05T13:00:00+00:00',
-    to: '2019-05-05T20:00:00+00:00',
-    title: 'This is another title'
+    color: '#F480A8',
+    from: '2019-05-05T12:00:00+00:00',
+    to: '2019-05-05T14:00:00+00:00',
+    title: 'Jet skiing'
 }, {
     id: 4,
-    color: '#8281fd',
-    from: '2019-05-05T00:00:00+00:00',
-    to: '2019-05-05T19:00:00+00:00',
-    title: 'This is another title'
+    color: '#fda256',
+    from: '2019-05-05T18:00:00+00:00',
+    to: '2019-05-05T19:30:00+00:00',
+    title: 'Dinner'
 }, {
     id: 5,
-    color: '#fd3153',
-    from: '2019-05-05T16:12:00+00:00',
-    to: '2019-05-05T19:50:00+00:00',
-    title: 'This is a test'
-}, {
-    id: 6,
     color: '#8281fd',
-    from: '2019-05-05T20:00:00+00:00',
-    to: '2019-05-05T20:30:00+00:00',
-    title: 'This is final title'
-}, {
-    id: 7,
-    color: '#fd9c60',
     from: '2019-05-15T12:00:00+00:00',
     to: '2019-05-15T21:00:00+00:00',
-    title: 'This is final title'
+    title: 'Doctors'
 }];
 
 class App extends React.Component {

@@ -83,7 +83,7 @@ export default class Day extends React.PureComponent {
                     color={event.color}
                     title={event.title}
                     position={event.position}
-                    onClick={() => this.props.onClickEvent && this.props.onClickEvent(event)}
+                    // onClick={() => this.props.onClickEvent && this.props.onClickEvent(event)}
                 />
             )
         });

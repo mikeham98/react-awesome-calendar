@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styles from './index.styles.scss';
 import Header from "./Header";
 import Monthly from "./Monthly";
@@ -49,7 +50,6 @@ class Calendar extends React.PureComponent {
                         year={this.state.year}
                         events={events}
                         onClickDay={this.onClickDay}
-                        onClickEvent={this.props.onClickEvent}
                     />
                 );
             case dailyMode:
@@ -130,5 +130,11 @@ class Calendar extends React.PureComponent {
         );
     }
 }
+
+Calendar.propTypes = {
+    events: PropTypes.array,
+    onClickEvent: PropTypes.func,
+    header: PropTypes.func,
+};
 
 export default Calendar;

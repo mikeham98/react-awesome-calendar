@@ -1,6 +1,6 @@
 {
   "name": "react-awesome-calendar",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "scripts": {
     "start": "webpack --watch --mode production",
     "build": "webpack --mode production",

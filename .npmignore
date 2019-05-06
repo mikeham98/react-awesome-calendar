@@ -7,3 +7,4 @@ src
 .prettierrc
 webpack.config.js
 yarn.lock
+assets
