@@ -92,4 +92,15 @@ If you wish to provide a customer header component you can pass in a prop which 
     onClickPrev: function - this will change the calendar to the prev year, month, day depending on the mode
     onClickNext: function - this will change the calendar to the next year, month, day depending on the mode
 }
-```
+``
+
+![alt text](https://raw.githubusercontent.com/mikeham98/react-awesome-calendar/develop/assets/monthly.jpg)
+
+![alt text](https://raw.githubusercontent.com/mikeham98/react-awesome-calendar/develop/assets/monthly.jpg)
+
+![alt text](https://raw.githubusercontent.com/mikeham98/react-awesome-calendar/develop/assets/monthly.jpg)
+
+
+https://mikeham98@github.com/mikeham98/react-awesome-calendar/blob/develop/assets/monthly.jpg
+
+https://mikeham98@github.com/mikeham98/react-awesome-calendar/blob/develop/assets/daily

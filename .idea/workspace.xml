@@ -2,21 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="11f64a0a-dda6-48e3-81a5-557abe0a870b" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/assets/daily" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/monthly.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/yearly.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.npmignore" beforeDir="false" afterPath="$PROJECT_DIR$/.npmignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/example1/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/examples/example1/src/App.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Calendar/Monthly/Day.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Calendar/Monthly/Day.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Calendar/Monthly/Day.styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Calendar/Monthly/Day.styles.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Calendar/Monthly/Event.styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Calendar/Monthly/Event.styles.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Calendar/Monthly/Week.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Calendar/Monthly/Week.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Calendar/Monthly/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Calendar/Monthly/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Calendar/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Calendar/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Calendar/util/calendar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Calendar/util/calendar.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -30,11 +16,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="18" column="4" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="29" />
+            <state relative-caret-position="344">
+              <caret line="96" column="12" selection-start-line="96" selection-start-column="12" selection-end-line="96" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -126,7 +112,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="App.jsx" pinned="false" current-in-tab="true">
+      <file leaf-file-name="App.jsx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/examples/example1/src/App.jsx">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="403">
@@ -250,7 +236,6 @@
         <option value="$PROJECT_DIR$/examples/example1/package.json" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/src/Calendar/util/calendar.js" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/Calendar/index.jsx" />
         <option value="$PROJECT_DIR$/src/Calendar/Monthly/index.jsx" />
         <option value="$PROJECT_DIR$/src/Calendar/Monthly/Week.jsx" />
@@ -259,6 +244,7 @@
         <option value="$PROJECT_DIR$/src/Calendar/Monthly/Day.styles.scss" />
         <option value="$PROJECT_DIR$/.npmignore" />
         <option value="$PROJECT_DIR$/examples/example1/src/App.jsx" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -412,12 +398,12 @@
       <workItem from="1556970656129" duration="7288000" />
       <workItem from="1557055206588" duration="8916000" />
       <workItem from="1557087222933" duration="1831000" />
-      <workItem from="1557089102434" duration="11745000" />
+      <workItem from="1557089102434" duration="12100000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="87521000" />
+    <option name="totallyTimeSpent" value="87876000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="73" y="23" width="981" height="825" extended-state="0" />
@@ -725,13 +711,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="18" column="4" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Calendar/index.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -810,6 +789,13 @@
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="344">
+          <caret line="96" column="12" selection-start-line="96" selection-start-column="12" selection-end-line="96" selection-end-column="12" />
         </state>
       </provider>
     </entry>
