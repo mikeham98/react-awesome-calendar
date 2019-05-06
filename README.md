@@ -6,6 +6,23 @@
 npm install --save react-awesome-calendar
 ```
 
+## Examples
+<div>
+<div style="display: inline-block; margin-right: 20px;">
+<h3>Monthly</h3>
+<img src="https://raw.githubusercontent.com/mikeham98/react-awesome-calendar/develop/assets/monthly.jpg" height="300">
+</div>
+
+<div style="display: inline-block; margin-right: 20px;">
+<h3>Daily</h3>
+<img src="https://raw.githubusercontent.com/mikeham98/react-awesome-calendar/develop/assets/daily.jpg" height="300">
+</div>
+
+<div style="display: inline-block; margin-right: 20px;">
+<h3>Yearly</h3>
+<img src="https://raw.githubusercontent.com/mikeham98/react-awesome-calendar/develop/assets/yearly.jpg" height="300">
+</div>
+
 ## Basic use
 ```bash
 import Calendar from 'react-awesome-calendar';
@@ -69,6 +86,7 @@ The onClickEvent prop is a function that will be called on click of an event on 
 
 ### header
 If you wish to provide a customer header component you can pass in a prop which will override the header used by default. The following props will be passed into this component:
+
 #### props
 
 ```bash
@@ -92,15 +110,4 @@ If you wish to provide a customer header component you can pass in a prop which 
     onClickPrev: function - this will change the calendar to the prev year, month, day depending on the mode
     onClickNext: function - this will change the calendar to the next year, month, day depending on the mode
 }
-``
-
-![alt text](https://raw.githubusercontent.com/mikeham98/react-awesome-calendar/develop/assets/monthly.jpg)
-
-![alt text](https://raw.githubusercontent.com/mikeham98/react-awesome-calendar/develop/assets/monthly.jpg)
-
-![alt text](https://raw.githubusercontent.com/mikeham98/react-awesome-calendar/develop/assets/monthly.jpg)
-
-
-https://mikeham98@github.com/mikeham98/react-awesome-calendar/blob/develop/assets/monthly.jpg
-
-https://mikeham98@github.com/mikeham98/react-awesome-calendar/blob/develop/assets/daily
+```

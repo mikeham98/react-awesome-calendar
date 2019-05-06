@@ -7,6 +7,9 @@
     "deploy": "gh-pages -d",
     "publish": "npm run build && npm run deploy && npm publish"
   },
+  "author": "Michael Hamilton",
+  "description": "An easy to use React Calendar component",
+  "homepage": "https://github.com/mikeham98/react-awesome-calendar",
   "main": "build/index.js",
   "browserslist": [
     ">0.2%",
