@@ -1,5 +1,7 @@
 export const getDate = (date) => {
-    return new Date(date.getFullYear(), date.getMonth(), date.getDate());
+    if(checkDate(date)) {
+      return new Date(date.getFullYear(), date.getMonth(), date.getDate());
+    }
 };
 
 export const getTimeFromDate = (date) => {
@@ -16,3 +18,5 @@ export const getTimeFromDate = (date) => {
 
     return hour + ':' + mins;
 };
+
+export const checkDate = (date) => Object.prototype.toString.call(date) === "[object Date]";

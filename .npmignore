@@ -10,3 +10,4 @@ webpack.config.js
 yarn.lock
 assets
 /.idea
+coverage
