@@ -4,8 +4,7 @@
   "scripts": {
     "start": "webpack --watch --mode production",
     "build": "webpack --mode production",
-    "deploy": "gh-pages -d",
-    "publish": "npm run build && npm run deploy && npm publish"
+    "publish": "npm run build && npm publish"
   },
   "author": "Michael Hamilton",
   "description": "An easy to use React Calendar component",
