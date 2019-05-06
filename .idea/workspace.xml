@@ -141,7 +141,7 @@
       <find>onClickEvent</find>
       <find>events</find>
       <find>getDeta</find>
-      <find>|header           |component     |This allows you to provide a custom header component for the calendar     |undefined           |</find>
+      <find />
       <find>##</find>
     </findStrings>
     <replaceStrings>
@@ -159,7 +159,7 @@
       <replace>fromDateOnly</replace>
       <replace>to</replace>
       <replace>formattedEvents</replace>
-      <replace>export const</replace>
+      <replace />
       <replace>right</replace>
       <replace>date</replace>
       <replace>fromDateAsTime</replace>
@@ -257,8 +257,8 @@
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="382" />
-    <option name="y" value="79" />
+    <option name="x" value="404" />
+    <option name="y" value="23" />
     <option name="width" value="1337" />
     <option name="height" value="825" />
   </component>
