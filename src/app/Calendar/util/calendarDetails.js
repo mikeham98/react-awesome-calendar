@@ -16,6 +16,7 @@ const prevCalendar = (mode, year, month, day) => {
         case monthlyMode:
             prev.year = year;
             prev.month = month - 1;
+            prev.day = 1;
             if (prev.month < 0) {
                 prev.year -= 1;
                 prev.month = 11;
@@ -41,6 +42,7 @@ const nextCalendar = (mode, year, month, day) => {
         case monthlyMode:
             next.year = year;
             next.month = month + 1;
+            next.day = 1;
             if (next.month > 11) {
                 next.year += 1;
                 next.month = 0;
