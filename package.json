@@ -1,10 +1,10 @@
 {
   "name": "react-awesome-calendar",
-  "version": "0.0.3",
+  "version": "0.0.2",
   "scripts": {
     "start": "webpack --watch --mode production",
     "build": "webpack --mode production",
-    "publish": "npm run build && npm publish"
+    "publishPackage": "npm run build && npm publish"
   },
   "author": "Michael Hamilton",
   "description": "An easy to use React Calendar component",
