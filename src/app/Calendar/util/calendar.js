@@ -15,7 +15,7 @@ const getStartOfCalendar = date => {
 
   if (originalStartDate.getDay() !== firstDayOfWeek) {
     actualStartDate.setDate(
-      originalStartDate.getDate() - originalStartDate.getDay() + firstDayOfWeek
+      originalStartDate.getDate() - originalStartDate.getDay() + firstDayOfWeek,
     );
   }
   return actualStartDate;
@@ -27,7 +27,7 @@ const getEndOfCalendar = date => {
 
   if (originalEndDate !== 7 - 1 - firstDayOfWeek) {
     actualEndDate.setDate(
-      originalEndDate.getDate() - originalEndDate.getDay() + lastDayOfWeek
+      originalEndDate.getDate() - originalEndDate.getDay() + lastDayOfWeek,
     );
   }
   return actualEndDate;
@@ -69,8 +69,8 @@ export const formatEvents = events => {
       const toDate = getDate(to);
       const fromDateAsTime = fromDate.getTime();
       const toDateAsTime = toDate.getTime();
-
       // if the from date is the same as the to date
+
       if (fromDateAsTime === toDateAsTime) {
         if (!Array.isArray(formattedEvents[fromDateAsTime])) {
           formattedEvents[fromDateAsTime] = [];
@@ -84,31 +84,42 @@ export const formatEvents = events => {
       } else {
         const daySpan = dateDiff(from, to);
 
-        // loop over each day between the from - to date
-        for (let x = 0; x < daySpan; x++) {
-          const dateIteration = new Date(fromDateAsTime);
-          dateIteration.setDate(fromDate.getDate() + x);
 
-          // work out whether the event is positioned first, middle or last
-          let position;
-          if (x === 0) {
-            position = startPosition;
-          } else if (x < daySpan - 1) {
-            position = middlePosition;
-          } else {
-            position = endPosition;
+        if (daySpan === 1 && from.getUTCHours() === to.getUTCHours()) {
+          if (!Array.isArray(formattedEvents[fromDateAsTime])) {
+            formattedEvents[fromDateAsTime] = [];
           }
-
-          const dateTime = dateIteration.getTime();
-          if (!Array.isArray(formattedEvents[dateTime])) {
-            formattedEvents[dateTime] = [];
-          }
-          formattedEvents[dateTime].push({
+          formattedEvents[fromDateAsTime].push({
             ...event,
-            spread: true,
-            date: dateIteration,
-            position,
+            allDay: true,
           });
+        } else {
+          // loop over each day between the from - to date
+          for (let x = 0; x < daySpan; x++) {
+            const dateIteration = new Date(fromDateAsTime);
+            dateIteration.setDate(fromDate.getDate() + x);
+
+            // work out whether the event is positioned first, middle or last
+            let position;
+            if (x === 0) {
+              position = startPosition;
+            } else if (x < daySpan - 1) {
+              position = middlePosition;
+            } else {
+              position = endPosition;
+            }
+
+            const dateTime = dateIteration.getTime();
+            if (!Array.isArray(formattedEvents[dateTime])) {
+              formattedEvents[dateTime] = [];
+            }
+            formattedEvents[dateTime].push({
+              ...event,
+              spread: true,
+              date: dateIteration,
+              position,
+            });
+          }
         }
       }
     });
@@ -116,7 +127,7 @@ export const formatEvents = events => {
     // sort each event by date time
     Object.keys(formattedEvents).forEach(date => {
       formattedEvents[date] = formattedEvents[date].sort(
-        (a, b) => new Date(a.from) - new Date(b.from)
+        (a, b) => new Date(a.from) - new Date(b.from),
       );
     });
   }

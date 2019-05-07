@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './index.styles.scss';
 import { getElementHeight } from '../util/getElementHeight';
 import Event from './Event';
+import { endPosition, middlePosition, startPosition } from '../constants';
 
 export default class Daily extends React.Component {
   constructor(props) {
@@ -29,21 +30,43 @@ export default class Daily extends React.Component {
     return header || 0;
   }
 
+  getTimeLineEvents() {
+    const { events } = this.props;
+    if (Array.isArray(events) && events.length) {
+      return events.filter(e => e.position !== middlePosition && !e.allDay);
+    }
+    return [];
+  }
+
+  getAllDayEvents() {
+    const { events } = this.props;
+    if (Array.isArray(events) && events.length) {
+      return events.filter(e => e.position === middlePosition || e.allDay);
+    }
+    return [];
+  }
+
   getHourPosition() {
     const { events } = this.props;
     if (Array.isArray(events) && events.length) {
-      const dayEvents = events.filter(e => !e.spread);
+      const dayEvents = this.getTimeLineEvents();
+      console.log(dayEvents);
       const hourWrapperHeight = this.returnHourWrapperHeight();
       const hourHeaderHeight = this.returnHourHeaderHeight() / 2;
 
       const eventWidthHandled = [];
       dayEvents.forEach(event => {
         const id = `dailyEvent-${event.id}`;
-        const fromDate = new Date(event.from);
-        const toDate = new Date(event.to);
-        const fromHour = this.getHoursMins(fromDate);
-        const toHour = this.getHoursMins(toDate);
-
+        let fromDate = new Date(event.from);
+        let toDate = new Date(event.to);
+        let fromHour = this.getHoursMins(fromDate);
+        if (event.position === endPosition) {
+          fromHour = 0;
+        }
+        let toHour = this.getHoursMins(toDate);
+        if (event.position === startPosition) {
+          toHour = 24;
+        }
         const timeDiff = toHour - fromHour;
 
         const eventHeight = timeDiff * hourWrapperHeight;
@@ -74,13 +97,19 @@ export default class Daily extends React.Component {
     );
 
     const otherEvents = changedEventsTest.filter(event => {
-      const eventFromDate = new Date(event.from);
-      const eventToDate = new Date(event.to);
-      const eventFromHour =
-        eventFromDate.getUTCHours() + eventFromDate.getUTCMinutes() / 60;
-      const eventToHour =
-        eventToDate.getUTCHours() + eventToDate.getUTCMinutes() / 60;
+      let eventFromDate = new Date(event.from);
+      let eventToDate = new Date(event.to);
 
+      let eventFromHour =
+        eventFromDate.getUTCHours() + eventFromDate.getUTCMinutes() / 60;
+      if (event.position === endPosition) {
+        eventFromHour = 0;
+      }
+      let eventToHour =
+        eventToDate.getUTCHours() + eventToDate.getUTCMinutes() / 60;
+      if (event.position === startPosition) {
+        eventFromHour = 24;
+      }
       return (
         (fromHour >= eventToHour && toHour < eventFromHour) ||
         (eventToHour >= fromHour && eventFromHour < toHour)
@@ -186,15 +215,9 @@ export default class Daily extends React.Component {
   }
 
   returnEvents() {
-    const { events } = this.props;
-    if (Array.isArray(events) && events.length) {
-      const dayEvents = events.filter(e => !e.spread);
+    const dayEvents = this.getTimeLineEvents();
+    if (Array.isArray(dayEvents) && dayEvents.length) {
       return dayEvents.map(event => {
-        // const from = new Date(event.from);
-        // const fromTime = getTimeFromDate(from);
-        // const to = new Date(event.to);
-        // const toTime = getTimeFromDate(to);
-
         return (
           <div
             key={event.id}
@@ -204,8 +227,7 @@ export default class Daily extends React.Component {
             <Event
               color={event.color}
               title={event.title}
-              // time={`${fromTime} - ${toTime}`}
-              onClick={() => this.onClickEvent(event)}
+              onClick={() => this.onClickEvent(event.id)}
             />
           </div>
         );
@@ -213,9 +235,9 @@ export default class Daily extends React.Component {
     }
   }
 
-  onClickEvent(event) {
+  onClickEvent(id) {
     if (this.props.onClickEvent) {
-      this.props.onClickEvent(event);
+      this.props.onClickEvent(id);
     }
   }
 
@@ -250,18 +272,15 @@ export default class Daily extends React.Component {
   }
 
   returnAllDayEvents() {
-    const { events } = this.props;
-    if (Array.isArray(events) && events.length) {
-      const dailyEvents = events.filter(e => e.spread);
+    const dailyEvents = this.getAllDayEvents();
+    if (Array.isArray(dailyEvents) && dailyEvents.length) {
       return dailyEvents.map(event => {
-        // const from = new Date(event.from);
-        // const to = new Date(event.to);
         return (
           <div key={event.id} className={styles.allDayEvent}>
             <Event
               color={event.color}
               title={event.title}
-              onClick={() => this.onClickEvent(event)}
+              onClick={() => this.onClickEvent(event.id)}
             />
           </div>
         );
