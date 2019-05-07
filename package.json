@@ -1,6 +1,6 @@
 {
   "name": "react-awesome-calendar",
-  "version": "0.2.3",
+  "version": "0.3.0",
   "license": "MIT",
   "author": "Michael Hamilton",
   "description": "An easy to use React Calendar component",
@@ -83,7 +83,10 @@
   },
   "jest": {
     "collectCoverage": true,
-    "coverageReporters": ["json", "html"],
+    "coverageReporters": [
+      "json",
+      "html"
+    ],
     "verbose": true,
     "transform": {
       "^.+\\.jsx?$": "babel-jest"
