@@ -33,7 +33,6 @@ npm install --save react-awesome-calendar
 ```bash
 import Calendar from 'react-awesome-calendar';
 
-
 const events = [{
     id: 1,
     color: '#fd3153',
@@ -75,6 +74,7 @@ class MyComponent extends React.Component {
 |header                 |component    |This allows you to provide a custom header component for the calendar                                         |
 |onChange               |function     |This will be called every time the calendar changes date or mode                                              |
 |onClickEvent           |function     |This function is called on click of an event on the daily mode                                                |
+|onClickTimeLine        |function     |This function is called on click of the timeline present on the daily calendar mode                                                |
 |ref                    |ref          |By passing in a ref it enables the ability to call methods on the Calendar class e.g. getDetails              |                         |
 
 #### events
@@ -149,6 +149,23 @@ The onClickEvent prop is a function that will be called on click of an event on 
             from: '2019-05-02T18:00:00+00:00',
             to: '2019-05-05T19:00:00+00:00',
             title: 'This is an event'
+        }
+    */
+}
+```
+
+#### onClickTimeLine
+The onClickTimeLine prop is a function that will be called on click of the timeline present on the  on the Day mode of the calendar. The year month date and hour (0-24 with a resolution of 0.5) will be passed through to the function as an argument
+##### Example
+```bash
+(date) => {
+    console.log(date)
+    /* result
+        {
+            year: 2019,
+            month: 0,
+            day: 1,
+            hour: 15.5
         }
     */
 }
