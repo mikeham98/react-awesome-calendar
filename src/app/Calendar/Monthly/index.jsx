@@ -11,9 +11,9 @@ export default class Monthly extends React.Component {
     this.onClickNext = this.onClickNext.bind(this);
   }
 
-  onClickDay() {
+  onClickDay(date) {
     if (this.props.onClickDay) {
-      this.props.onClickDay();
+      this.props.onClickDay(date);
     }
   }
 

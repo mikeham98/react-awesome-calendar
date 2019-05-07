@@ -1,5 +1,136 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`calendar formatEvents should return an object of key value pairs of dates with an array 1`] = `
+Object {
+  "1556665200000": Array [
+    Object {
+      "color": "#1ccb9e",
+      "date": 2019-04-30T23:00:00.000Z,
+      "from": "2019-05-01T13:00:00+00:00",
+      "id": 2,
+      "position": "startPosition",
+      "spread": true,
+      "title": "Holiday",
+      "to": "2019-05-05T14:00:00+00:00",
+    },
+  ],
+  "1556751600000": Array [
+    Object {
+      "color": "#1ccb9e",
+      "date": 2019-05-01T23:00:00.000Z,
+      "from": "2019-05-01T13:00:00+00:00",
+      "id": 2,
+      "position": "middlePosition",
+      "spread": true,
+      "title": "Holiday",
+      "to": "2019-05-05T14:00:00+00:00",
+    },
+    Object {
+      "color": "#fd3153",
+      "date": 2019-05-01T23:00:00.000Z,
+      "from": "2019-05-02T18:00:00+00:00",
+      "id": 1,
+      "position": "startPosition",
+      "spread": true,
+      "title": "Seeing family",
+      "to": "2019-05-05T19:00:00+00:00",
+    },
+  ],
+  "1556838000000": Array [
+    Object {
+      "color": "#1ccb9e",
+      "date": 2019-05-02T23:00:00.000Z,
+      "from": "2019-05-01T13:00:00+00:00",
+      "id": 2,
+      "position": "middlePosition",
+      "spread": true,
+      "title": "Holiday",
+      "to": "2019-05-05T14:00:00+00:00",
+    },
+    Object {
+      "color": "#fd3153",
+      "date": 2019-05-02T23:00:00.000Z,
+      "from": "2019-05-02T18:00:00+00:00",
+      "id": 1,
+      "position": "middlePosition",
+      "spread": true,
+      "title": "Seeing family",
+      "to": "2019-05-05T19:00:00+00:00",
+    },
+  ],
+  "1556924400000": Array [
+    Object {
+      "color": "#1ccb9e",
+      "date": 2019-05-03T23:00:00.000Z,
+      "from": "2019-05-01T13:00:00+00:00",
+      "id": 2,
+      "position": "middlePosition",
+      "spread": true,
+      "title": "Holiday",
+      "to": "2019-05-05T14:00:00+00:00",
+    },
+    Object {
+      "color": "#fd3153",
+      "date": 2019-05-03T23:00:00.000Z,
+      "from": "2019-05-02T18:00:00+00:00",
+      "id": 1,
+      "position": "middlePosition",
+      "spread": true,
+      "title": "Seeing family",
+      "to": "2019-05-05T19:00:00+00:00",
+    },
+  ],
+  "1557010800000": Array [
+    Object {
+      "color": "#1ccb9e",
+      "date": 2019-05-04T23:00:00.000Z,
+      "from": "2019-05-01T13:00:00+00:00",
+      "id": 2,
+      "position": "endPosition",
+      "spread": true,
+      "title": "Holiday",
+      "to": "2019-05-05T14:00:00+00:00",
+    },
+    Object {
+      "color": "#fd3153",
+      "date": 2019-05-04T23:00:00.000Z,
+      "from": "2019-05-02T18:00:00+00:00",
+      "id": 1,
+      "position": "endPosition",
+      "spread": true,
+      "title": "Seeing family",
+      "to": "2019-05-05T19:00:00+00:00",
+    },
+    Object {
+      "color": "#F480A8",
+      "date": 2019-05-05T12:00:00.000Z,
+      "from": 2019-05-05T12:00:00.000Z,
+      "id": 3,
+      "title": "Jet skiing",
+      "to": 2019-05-05T14:00:00.000Z,
+    },
+    Object {
+      "color": "#fda256",
+      "date": 2019-05-05T18:00:00.000Z,
+      "from": 2019-05-05T18:00:00.000Z,
+      "id": 4,
+      "title": "Dinner",
+      "to": 2019-05-05T19:30:00.000Z,
+    },
+  ],
+  "1557874800000": Array [
+    Object {
+      "color": "#8281fd",
+      "date": 2019-05-15T12:00:00.000Z,
+      "from": 2019-05-15T12:00:00.000Z,
+      "id": 5,
+      "title": "Doctors",
+      "to": 2019-05-15T21:00:00.000Z,
+    },
+  ],
+}
+`;
+
 exports[`calendar getCalendarMonth should return a month from 28th April - 1st June 1`] = `
 Array [
   Array [

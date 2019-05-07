@@ -4,6 +4,11 @@ import { getElementHeight } from '../util/getElementHeight';
 import Event from './Event';
 
 export default class Daily extends React.Component {
+  constructor(props) {
+    super(props);
+    this.onClickTimeLine = this.onClickTimeLine.bind(this);
+  }
+
   componentDidMount() {
     this.getHourPosition();
   }
@@ -12,15 +17,25 @@ export default class Daily extends React.Component {
     this.getHourPosition();
   }
 
+  returnHourWrapperHeight() {
+    const hourWrappers = document.getElementsByClassName('dailyHourWrapper');
+    const wrapper = getElementHeight(hourWrappers[0]);
+    return wrapper || 0;
+  }
+
+  returnHourHeaderHeight() {
+    const hourHeader = document.getElementsByClassName('dailyHour');
+    const header = getElementHeight(hourHeader[0]);
+    return header || 0;
+  }
+
   getHourPosition() {
     const { events } = this.props;
     if (Array.isArray(events) && events.length) {
       const dayEvents = events.filter(e => !e.spread);
-      const hourWrapper = document.getElementsByClassName('dailyHourWrapper');
-      const hourHeader = document.getElementsByClassName('dailyHour');
-      //TODO: change singlehour height in the other place event height?
-      const hourWrapperHeight = getElementHeight(hourWrapper[0]);
-      const hourHeaderHeight = getElementHeight(hourHeader[0]) / 2;
+      const hourWrapperHeight = this.returnHourWrapperHeight();
+      const hourHeaderHeight = this.returnHourHeaderHeight() / 2;
+
       const eventWidthHandled = [];
       dayEvents.forEach(event => {
         const id = `dailyEvent-${event.id}`;
@@ -40,7 +55,7 @@ export default class Daily extends React.Component {
           dayEvents,
           fromHour,
           toHour,
-          event.id
+          event.id,
         );
 
         document.getElementById(id).style.top = `${eventPosition}px`;
@@ -55,7 +70,7 @@ export default class Daily extends React.Component {
 
   handleEventWidth(eventWidthHandled, events, fromHour, toHour, currentId) {
     const changedEventsTest = events.filter(
-      e => !eventWidthHandled.find(id => id === e.id)
+      e => !eventWidthHandled.find(id => id === e.id),
     );
 
     const otherEvents = changedEventsTest.filter(event => {
@@ -86,7 +101,7 @@ export default class Daily extends React.Component {
         document.getElementById(eventId).style.width = width;
         document.getElementById(eventId).style.left = `${(100 /
           numberOfEvents) *
-          (i + 1)}%`;
+        (i + 1)}%`;
         document.getElementById(eventId).className += dayEventMultiple;
       });
     }
@@ -163,7 +178,7 @@ export default class Daily extends React.Component {
       return (
         <div key={i} className={styles.dailyHourWrapper}>
           <div className={styles.dailyHour}>
-            <div className={styles.dailyHourLine} />
+            <div className={styles.dailyHourLine}/>
           </div>
         </div>
       );
@@ -204,9 +219,27 @@ export default class Daily extends React.Component {
     }
   }
 
+  onClickTimeLine(event) {
+    if (this.props.onClickTimeLine) {
+      const offsetTop = document.getElementById('dailyTimeLine').offsetTop;
+      const scrollTop = document.getElementById('dailyTimeLine').scrollTop;
+      const clientY = event.clientY;
+      const positionY = scrollTop + clientY - offsetTop - (this.returnHourHeaderHeight() / 2);
+      let hourPosition = positionY / this.returnHourWrapperHeight();
+      let hour = Math.round(hourPosition * 2) / 2;
+      if (hour <= 0) {
+        hour = 0;
+      }
+      if (hour > 24) {
+        hour = 24;
+      }
+      this.props.onClickTimeLine(hour);
+    }
+  }
+
   returnTimeLine() {
     return (
-      <div className={styles.dailyTimeLineWrapper}>
+      <div id='dailyTimeLine' className={styles.dailyTimeLineWrapper} onClick={this.onClickTimeLine}>
         <div className={styles.dailyHourTextWrapper}>{this.returnHours()}</div>
         <div className={styles.dailyTimeLine}>
           {this.returnEvents()}

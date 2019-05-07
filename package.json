@@ -83,7 +83,10 @@
   },
   "jest": {
     "collectCoverage": true,
-    "coverageReporters": ["json", "html"],
+    "coverageReporters": [
+      "json",
+      "html"
+    ],
     "verbose": true,
     "transform": {
       "^.+\\.jsx?$": "babel-jest"

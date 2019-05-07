@@ -14,6 +14,12 @@ import { calendarDetails } from './util/calendarDetails';
 //set beginning day of the week
 //be able to export Yearly, Monthly and Daily
 
+const modes = {
+  day: dailyMode,
+  month: monthlyMode,
+  year: yearlyMode,
+};
+
 class Calendar extends React.PureComponent {
   constructor(props) {
     super(props);
@@ -25,6 +31,7 @@ class Calendar extends React.PureComponent {
       year: currentDate.getFullYear(),
     };
     this.onClickDay = this.onClickDay.bind(this);
+    this.onClickTimeLine = this.onClickTimeLine.bind(this);
     this.onClickMonth = this.onClickMonth.bind(this);
     this.onClickMode = this.onClickMode.bind(this);
     this.onClickPrev = this.onClickPrev.bind(this);
@@ -36,7 +43,8 @@ class Calendar extends React.PureComponent {
     return { mode, year, month, day };
   }
 
-  returnDailyEvents(events) {
+  returnDailyEvents() {
+    const events = formatEvents(this.props.events);
     const { year, month, day } = this.state;
     const date = new Date(year, month, day);
     return events[date.getTime()];
@@ -47,7 +55,10 @@ class Calendar extends React.PureComponent {
     switch (this.state.mode) {
       case yearlyMode:
         return (
-          <Yearly year={this.state.year} onClickMonth={this.onClickMonth}/>
+          <Yearly
+            year={this.state.year}
+            onClickMonth={this.onClickMonth}
+          />
         );
       case monthlyMode:
         return (
@@ -63,19 +74,29 @@ class Calendar extends React.PureComponent {
       case dailyMode:
         return (
           <Daily
-            events={this.returnDailyEvents(events)}
+            events={this.returnDailyEvents()}
             onClickEvent={this.props.onClickEvent}
+            onClickTimeLine={this.onClickTimeLine}
           />
         );
     }
+  }
+
+  onClickTimeLine(hour) {
+    const { year, month, day } = this.state;
+    this.props.onClickTimeLine({
+      year,
+      month,
+      day,
+      hour,
+    });
   }
 
   onClickDay(date) {
     const day = date.getDate();
     const month = date.getMonth();
     const year = date.getFullYear();
-    this.setState(
-      {
+    this.setState({
         mode: dailyMode,
         day,
         month,
@@ -146,7 +167,11 @@ class Calendar extends React.PureComponent {
   render() {
     return (
       <div className={styles.calendarWrapper}>
-        <Mode active={this.state.mode} onClick={this.onClickMode}/>
+        <Mode
+          modes={this.props.modes}
+          active={this.state.mode}
+          onClick={this.onClickMode}
+        />
         {this.returnHeader()}
         {this.returnCalendar()}
       </div>
@@ -155,6 +180,7 @@ class Calendar extends React.PureComponent {
 }
 
 Calendar.propTypes = {
+  modes: PropTypes.array,
   events: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.number.isRequired,
