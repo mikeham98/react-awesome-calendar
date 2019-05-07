@@ -137,19 +137,13 @@ The onChange prop is a function that will be called on change of the mode (year,
 ```
 
 #### onClickEvent
-The onClickEvent prop is a function that will be called on click of an event on the Day mode of the calendar. The event will be passed through to the function as an argument
+The onClickEvent prop is a function that will be called on click of an event on the Day mode of the calendar. The event id will be passed through to the function as an argument
 ##### Example
 ```bash
 (event) => {
     console.log(event)
     /* result
-        {
-            id: 1,
-            color: '#fd3153',
-            from: '2019-05-02T18:00:00+00:00',
-            to: '2019-05-05T19:00:00+00:00',
-            title: 'This is an event'
-        }
+       42
     */
 }
 ```

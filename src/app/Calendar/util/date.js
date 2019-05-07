@@ -1,7 +1,7 @@
 export const getDate = date => {
-  if (checkDate(date)) {
+  // if (checkDate(date)) {
     return new Date(date.getFullYear(), date.getMonth(), date.getDate());
-  }
+  // }
 };
 
 export const getTimeFromDate = date => {
