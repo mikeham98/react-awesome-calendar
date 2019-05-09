@@ -159,7 +159,8 @@ class Calendar extends React.PureComponent {
       onClickNext: this.onClickNext,
     };
     if (this.props.header) {
-      return this.props.header(props);
+      let CustomHeader = this.props.header;
+      return <CustomHeader {...props} />;
     }
     return <Header {...props} />;
   }
