@@ -245,7 +245,7 @@ export default class Daily extends React.Component {
       const offsetTop = document.getElementById('dailyTimeLine').offsetTop;
       const scrollTop = document.getElementById('dailyTimeLine').scrollTop;
       const clientY = event.clientY;
-      const positionY = scrollTop + clientY - offsetTop - (this.returnHourHeaderHeight() / 2);
+      const positionY = window.scrollY + scrollTop + clientY - offsetTop - (this.returnHourHeaderHeight() / 2);
       let hourPosition = positionY / this.returnHourWrapperHeight();
       let hour = Math.round(hourPosition * 2) / 2;
       if (hour <= 0) {
