@@ -50,7 +50,6 @@ export default class Daily extends React.Component {
     const { events } = this.props;
     if (Array.isArray(events) && events.length) {
       const dayEvents = this.getTimeLineEvents();
-      console.log(dayEvents);
       const hourWrapperHeight = this.returnHourWrapperHeight();
       const hourHeaderHeight = this.returnHourHeaderHeight() / 2;
 

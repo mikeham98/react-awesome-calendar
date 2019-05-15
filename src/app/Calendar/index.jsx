@@ -83,13 +83,15 @@ class Calendar extends React.PureComponent {
   }
 
   onClickTimeLine(hour) {
-    const { year, month, day } = this.state;
-    this.props.onClickTimeLine({
-      year,
-      month,
-      day,
-      hour,
-    });
+    if (this.props.onClickTimeLine) {
+      const { year, month, day } = this.state;
+      this.props.onClickTimeLine({
+        year,
+        month,
+        day,
+        hour,
+      });
+    }
   }
 
   onClickDay(date) {
