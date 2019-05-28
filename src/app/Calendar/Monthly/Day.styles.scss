@@ -6,7 +6,7 @@
   overflow: hidden;
   cursor: pointer;
   width: calc(100% / 7);
-  height: 80px;
+  height: 90px;
   .dayDate {
     display: block;
     text-align: right;
@@ -27,7 +27,9 @@
   position: relative;
   height: 20px;
   width: 20px;
+  padding: 2px;
   line-height: 20px;
+  font-size: 0.9em;
   text-align: center;
 }
 
