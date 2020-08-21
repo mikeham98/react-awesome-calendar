@@ -4,9 +4,8 @@
   "scripts": {
     "start": "webpack-dev-server --mode development --open --watch",
     "build": "webpack --mode production",
-    "fix-code": "prettier-eslint --write './src/**/*.{js,jsx}' ",
-    "fix-styles": "prettier-stylelint --write './src/**/*.{css,scss}' ",
-    "updateLink": "npm rm react-awesome-calendar -g && npm link react-awesome-calendar"
+    "fix-code": "prettier-eslint --write 'src/**/*.{js,jsx}' ",
+    "fix-styles": "prettier-stylelint --write 'src/**/*.{css,scss}' "
   },
   "browserslist": [
     ">0.2%",
@@ -48,6 +47,7 @@
   },
   "dependencies": {
     "classnames": "^2.2.6",
+    "react-awesome-calendar": "file:../",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
     "react-redux": "^6.0.0",
