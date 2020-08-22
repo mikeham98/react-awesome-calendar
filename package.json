@@ -1,6 +1,6 @@
 {
   "name": "react-awesome-calendar",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "license": "MIT",
   "author": "Michael Hamilton",
   "description": "An easy to use React Calendar component",
@@ -42,6 +42,7 @@
     "@babel/node": "^7.10.5",
     "@babel/preset-env": "^7.11.0",
     "@babel/preset-react": "^7.10.4",
+    "@babel/plugin-transform-typeof-symbol": "^7.10.4",
     "@babel/register": "^7.10.5",
     "babel-core": "^7.0.0-bridge.0",
     "babel-jest": "^26.3.0",
