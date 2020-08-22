@@ -53,9 +53,6 @@ module.exports = {
         new CleanWebpackPlugin('dist', {}),
         new WebpackMd5Hash()
     ],
-    externals: {
-        'react': 'commonjs react'
-    },
     resolve: {
         extensions: [".js", ".jsx"],
         symlinks: true
