@@ -53,9 +53,9 @@ export default class Daily extends React.Component {
       const hourWrapperHeight = this.returnHourWrapperHeight();
       const hourHeaderHeight = this.returnHourHeaderHeight() / 2;
 
-      const eventWidthHandled = [];
-      dayEvents.forEach(event => {
-        const id = `dailyEvent-${event.id}`;
+      // const eventWidthHandled = [];
+      dayEvents.forEach((event, index) => {
+        const id = `dailyEvent-${event.id}-${event.date.getDate()}`;
         let fromDate = new Date(event.from);
         let toDate = new Date(event.to);
         let fromHour = this.getHoursMins(fromDate);
@@ -63,7 +63,7 @@ export default class Daily extends React.Component {
           fromHour = 0;
         }
         let toHour = this.getHoursMins(toDate);
-        if (event.position === startPosition) {
+        if (event.position === startPosition || (event.span === 1 && toHour === 0)) {
           toHour = 24;
         }
         const timeDiff = toHour - fromHour;
@@ -71,17 +71,19 @@ export default class Daily extends React.Component {
         const eventHeight = timeDiff * hourWrapperHeight;
         const eventPosition = fromHour * hourWrapperHeight + hourHeaderHeight;
 
-        eventWidthHandled.push(event.id);
-        this.handleEventWidth(
-          eventWidthHandled,
-          dayEvents,
-          fromHour,
-          toHour,
-          event.id,
-        );
+        // eventWidthHandled.push(event.id);
+        // this.handleEventWidth(
+        //   eventWidthHandled,
+        //   dayEvents,
+        //   fromHour,
+        //   toHour,
+        //   event.id,
+        // );
 
         document.getElementById(id).style.top = `${eventPosition}px`;
         document.getElementById(id).style.height = `${eventHeight}px`;
+        document.getElementById(id).style.width = `calc((100% / ${dayEvents.length}) - 10px)`;
+        document.getElementById(id).style.left = `calc((100% / ${dayEvents.length}) * ${index})`;
       });
     }
   }
@@ -90,50 +92,28 @@ export default class Daily extends React.Component {
     return date.getUTCHours() + date.getUTCMinutes() / 60;
   }
 
-  handleEventWidth(eventWidthHandled, events, fromHour, toHour, currentId) {
-    const changedEventsTest = events.filter(
-      e => !eventWidthHandled.find(id => id === e.id),
-    );
-
-    const otherEvents = changedEventsTest.filter(event => {
-      let eventFromDate = new Date(event.from);
-      let eventToDate = new Date(event.to);
-
-      let eventFromHour =
-        eventFromDate.getUTCHours() + eventFromDate.getUTCMinutes() / 60;
-      if (event.position === endPosition) {
-        eventFromHour = 0;
-      }
-      let eventToHour =
-        eventToDate.getUTCHours() + eventToDate.getUTCMinutes() / 60;
-      if (event.position === startPosition) {
-        eventFromHour = 24;
-      }
-      return (
-        (fromHour >= eventToHour && toHour < eventFromHour) ||
-        (eventToHour >= fromHour && eventFromHour < toHour)
-      );
-    });
-    if (Array.isArray(otherEvents) && otherEvents.length) {
-      const id = `dailyEvent-${currentId}`;
-      const dayEventMultiple = ' dayEventMultiple';
-      const numberOfEvents = otherEvents.length + 1;
-      const width = `${100 / numberOfEvents}%`;
-      document.getElementById(id).style.width = width;
-      document.getElementById(id).style.left = '0px';
-      document.getElementById(id).className += dayEventMultiple;
-
-      otherEvents.forEach((e, i) => {
-        eventWidthHandled.push(e.id);
-        const eventId = `dailyEvent-${e.id}`;
-        document.getElementById(eventId).style.width = width;
-        document.getElementById(eventId).style.left = `${(100 /
-          numberOfEvents) *
-        (i + 1)}%`;
-        document.getElementById(eventId).className += dayEventMultiple;
-      });
-    }
-  }
+  // handleEventWidth(eventWidthHandled, events, fromHour, toHour, currentId) {
+  //   // const changedEvents = events.filter(
+  //   //   e => !eventWidthHandled.find(id => id === e.id),
+  //   // );
+  //   const changedEvents = events;
+  //   if (Array.isArray(changedEvents) && changedEvents.length) {
+  //     const dayEventMultiple = ' dayEventMultiple';
+  //     const numberOfEvents = changedEvents.length + 1;
+  //     const width = `${100 / numberOfEvents}%`;
+  //     console.log('changedEvents',changedEvents);
+  //     changedEvents.forEach((e, i) => {
+  //       eventWidthHandled.push(e.id);
+  //       const eventId = `dailyEvent-${e.id}-${e.date.getDate()}`;
+  //       console.log(eventId, document.getElementById(eventId))
+  //       document.getElementById(eventId).style.width = width;
+  //       document.getElementById(eventId).style.left = `${(100 /
+  //         numberOfEvents) *
+  //       (i + 1)}%`;
+  //       document.getElementById(eventId).className += dayEventMultiple;
+  //     });
+  //   }
+  // }
 
   returnHours() {
     const hours = [
@@ -220,7 +200,7 @@ export default class Daily extends React.Component {
         return (
           <div
             key={event.id}
-            id={`dailyEvent-${event.id}`}
+            id={`dailyEvent-${event.id}-${event.date.getDate()}`}
             className={styles.dayEvent}
           >
             <Event
@@ -263,7 +243,9 @@ export default class Daily extends React.Component {
       <div id='dailyTimeLine' className={styles.dailyTimeLineWrapper} onClick={this.onClickTimeLine}>
         <div className={styles.dailyHourTextWrapper}>{this.returnHours()}</div>
         <div className={styles.dailyTimeLine}>
-          {this.returnEvents()}
+          <div>
+            {this.returnEvents()}
+          </div>
           {this.returnHoursLine()}
         </div>
       </div>

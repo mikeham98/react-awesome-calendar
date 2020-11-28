@@ -4,9 +4,20 @@ import { getDate } from './date';
 let firstDayOfWeek = 0;
 let lastDayOfWeek = 6;
 
+
+// 15 - 16 = 2
+// 15 - 15 = 1
+
 const dateDiff = (start, end) => {
   const timeDiff = Math.abs(end.getTime() - start.getTime());
-  return Math.ceil(timeDiff / (1000 * 3600 * 24));
+  const dayDiff = timeDiff / (1000 * 3600 * 24);
+  let value = Math.round(dayDiff) + 1;
+  const toDate = getDate(end);
+  const toDateAsTime = toDate.getTime();
+  if (end.getTime() === toDateAsTime) {
+    value -= 1;
+  }
+  return value;
 };
 
 const getStartOfCalendar = date => {
@@ -83,16 +94,22 @@ export const formatEvents = events => {
         });
       } else {
         const daySpan = dateDiff(from, to);
-
-
-        if (daySpan === 1 && from.getUTCHours() === to.getUTCHours()) {
+        if (daySpan === 1) {
           if (!Array.isArray(formattedEvents[fromDateAsTime])) {
             formattedEvents[fromDateAsTime] = [];
           }
-          formattedEvents[fromDateAsTime].push({
-            ...event,
-            allDay: true,
-          });
+          if(from.getUTCHours() === 0 && to.getUTCHours() === 0) {
+            formattedEvents[fromDateAsTime].push({
+              ...event,
+              allDay: true,
+              span: daySpan
+            });
+          }else {
+            formattedEvents[fromDateAsTime].push({
+              ...event,
+              span: daySpan
+            });
+          }
         } else {
           // loop over each day between the from - to date
           for (let x = 0; x < daySpan; x++) {
@@ -118,12 +135,12 @@ export const formatEvents = events => {
               spread: true,
               date: dateIteration,
               position,
+              span: daySpan
             });
           }
         }
       }
     });
-
     // sort each event by date time
     Object.keys(formattedEvents).forEach(date => {
       formattedEvents[date] = formattedEvents[date].sort(
