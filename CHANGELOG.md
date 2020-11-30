@@ -1,3 +1,8 @@
+Release v1.0.13
+
+Fixed
+- Fixed a bug where events that spanned less than 1 day and occurred over midnight would break when clicking on an event.
+
 Release v1.0.12
 
 Fixed
