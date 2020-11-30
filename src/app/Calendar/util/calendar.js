@@ -4,14 +4,13 @@ import { getDate } from './date';
 let firstDayOfWeek = 0;
 let lastDayOfWeek = 6;
 
-
-// 15 - 16 = 2
-// 15 - 15 = 1
-
 const dateDiff = (start, end) => {
-  const timeDiff = Math.abs(end.getTime() - start.getTime());
+  const from = new Date(start.getUTCFullYear(), start.getUTCMonth(), start.getUTCDate());
+  const to = new Date(end.getUTCFullYear(), end.getUTCMonth(), end.getUTCDate());
+
+  const timeDiff = Math.abs(from.getTime() - to.getTime());
   const dayDiff = timeDiff / (1000 * 3600 * 24);
-  let value = Math.round(dayDiff) + 1;
+  let value =  dayDiff + 1;
   const toDate = getDate(end);
   const toDateAsTime = toDate.getTime();
   if (end.getTime() === toDateAsTime) {
@@ -102,11 +101,13 @@ export const formatEvents = events => {
             formattedEvents[fromDateAsTime].push({
               ...event,
               allDay: true,
+              date: from,
               span: daySpan
             });
           }else {
             formattedEvents[fromDateAsTime].push({
               ...event,
+              date: from,
               span: daySpan
             });
           }
@@ -149,6 +150,7 @@ export const formatEvents = events => {
     });
   }
 
+  console.log('formattedEvents',formattedEvents);
   return formattedEvents;
 };
 
