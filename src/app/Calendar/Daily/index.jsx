@@ -33,7 +33,11 @@ export default class Daily extends React.Component {
   getTimeLineEvents() {
     const { events } = this.props;
     if (Array.isArray(events) && events.length) {
-      return events.filter(e => e.position !== middlePosition && !e.allDay);
+      return events.filter(e => (
+        e.position !== middlePosition &&
+        !e.allDay &&
+        !(e.position === endPosition && this.getTimeInHours(new Date(e.to)) === 0)
+      ));
     }
     return [];
   }
@@ -41,7 +45,11 @@ export default class Daily extends React.Component {
   getAllDayEvents() {
     const { events } = this.props;
     if (Array.isArray(events) && events.length) {
-      return events.filter(e => e.position === middlePosition || e.allDay);
+      return events.filter(e => (
+        e.position === middlePosition ||
+        e.allDay ||
+        (e.position === endPosition && this.getTimeInHours(new Date(e.to)) === 0)
+      ));
     }
     return [];
   }
@@ -58,11 +66,15 @@ export default class Daily extends React.Component {
         const id = `dailyEvent-${event.id}-${event.date.getDate()}`;
         let fromDate = new Date(event.from);
         let toDate = new Date(event.to);
-        let fromHour = this.getHoursMins(fromDate);
+        let fromHour = this.getTimeInHours(fromDate);
+        let toHour = this.getTimeInHours(toDate);
+        console.log('toHour',toHour);
         if (event.position === endPosition) {
           fromHour = 0;
+          if (toHour === 0) {
+            toHour = 24;
+          }
         }
-        let toHour = this.getHoursMins(toDate);
         if (event.position === startPosition || (event.span === 1 && toHour === 0)) {
           toHour = 24;
         }
@@ -88,8 +100,8 @@ export default class Daily extends React.Component {
     }
   }
 
-  getHoursMins(date) {
-    return date.getUTCHours() + date.getUTCMinutes() / 60;
+  getTimeInHours(date) {
+    return date.getUTCHours() + date.getUTCMinutes() / 60 + date.getUTCSeconds() / 3600000;
   }
 
   // handleEventWidth(eventWidthHandled, events, fromHour, toHour, currentId) {
@@ -254,6 +266,7 @@ export default class Daily extends React.Component {
 
   returnAllDayEvents() {
     const dailyEvents = this.getAllDayEvents();
+    console.log('dailyEvents',dailyEvents);
     if (Array.isArray(dailyEvents) && dailyEvents.length) {
       return dailyEvents.map(event => {
         return (
