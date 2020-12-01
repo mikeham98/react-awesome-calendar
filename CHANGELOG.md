@@ -1,3 +1,10 @@
+Release v1.0.14
+
+Fixed
+- Fixed a bug where events ending at midnight would incorrectly render on the following day
+- Fixed a bug where events would not render a full day even if the event ended on that day and spanned all 24 hours of that day
+- Fixed a bug where the date span was being incorrectly calculated for dates ending at midnight
+
 Release v1.0.13
 
 Fixed
