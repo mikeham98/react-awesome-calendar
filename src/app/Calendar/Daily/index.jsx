@@ -4,6 +4,8 @@ import { getElementHeight } from '../util/getElementHeight';
 import Event from './Event';
 import { endPosition, middlePosition, startPosition } from '../constants';
 
+import { DisjointUnionSets } from '../util/disjointSet';
+
 export default class Daily extends React.Component {
   constructor(props) {
     super(props);
@@ -53,52 +55,80 @@ export default class Daily extends React.Component {
     }
     return [];
   }
+getHourPosition() {
+        const { events } = this.props;
+        if (Array.isArray(events) && events.length) {
+            const dayEvents = this.getTimeLineEvents();
+            const hourWrapperHeight = this.returnHourWrapperHeight();
+            const hourHeaderHeight = this.returnHourHeaderHeight() / 2;
 
-  getHourPosition() {
-    const { events } = this.props;
-    if (Array.isArray(events) && events.length) {
-      const dayEvents = this.getTimeLineEvents();
-      const hourWrapperHeight = this.returnHourWrapperHeight();
-      const hourHeaderHeight = this.returnHourHeaderHeight() / 2;
+            var overlappingSet = this.getOverlappingSet(dayEvents);
 
-      // const eventWidthHandled = [];
-      dayEvents.forEach((event, index) => {
-        const id = `dailyEvent-${event.id}-${event.date.getDate()}`;
-        let fromDate = new Date(event.from);
-        let toDate = new Date(event.to);
-        let fromHour = this.getTimeInHours(fromDate);
-        let toHour = this.getTimeInHours(toDate);
-        console.log('toHour',toHour);
-        if (event.position === endPosition) {
-          fromHour = 0;
-          if (toHour === 0) {
-            toHour = 24;
-          }
+            let sizes = [];
+            let indexes = [];
+            let i = dayEvents.length;
+            while (i--) {
+                sizes[i] = 0;
+                indexes[i] = 0;
+            }
+
+            let y = 0;
+            for (let x = 0; x < events.length; x++) {
+                y = overlappingSet.find(x);
+                indexes[x] = sizes[y];
+                sizes[y] += 1;
+            }
+
+            dayEvents.forEach((event, index) => {
+                const id = `dailyEvent-${event.id}-${event.date.getDate()}`;
+                let fromDate = new Date(event.from);
+                let toDate = new Date(event.to);
+                let fromHour = this.getTimeInHours(fromDate);
+                let toHour = this.getTimeInHours(toDate);
+
+                if (event.position === endPosition) {
+                    fromHour = 0;
+                    if (toHour === 0) {
+                        toHour = 24;
+                    }
+                }
+                if (event.position === startPosition || (event.span === 1 && toHour === 0)) {
+                    toHour = 24;
+                }
+                const timeDiff = toHour - fromHour;
+
+                const eventHeight = timeDiff * hourWrapperHeight;
+                const eventPosition = fromHour * hourWrapperHeight + hourHeaderHeight;
+
+                document.getElementById(id).style.top = `${eventPosition}px`;
+                document.getElementById(id).style.height = `${eventHeight}px`;
+                document.getElementById(id).style.width = `calc((100% / ${sizes[overlappingSet.find(index)]}) - 10px)`;
+
+                document.getElementById(id).style.left = `calc((100% / ${sizes[overlappingSet.find(index)]}) * ${indexes[index]})`;
+            });
         }
-        if (event.position === startPosition || (event.span === 1 && toHour === 0)) {
-          toHour = 24;
-        }
-        const timeDiff = toHour - fromHour;
-
-        const eventHeight = timeDiff * hourWrapperHeight;
-        const eventPosition = fromHour * hourWrapperHeight + hourHeaderHeight;
-
-        // eventWidthHandled.push(event.id);
-        // this.handleEventWidth(
-        //   eventWidthHandled,
-        //   dayEvents,
-        //   fromHour,
-        //   toHour,
-        //   event.id,
-        // );
-
-        document.getElementById(id).style.top = `${eventPosition}px`;
-        document.getElementById(id).style.height = `${eventHeight}px`;
-        document.getElementById(id).style.width = `calc((100% / ${dayEvents.length}) - 10px)`;
-        document.getElementById(id).style.left = `calc((100% / ${dayEvents.length}) * ${index})`;
-      });
     }
-  }
+
+    getOverlappingSet(events) {
+        let set = new DisjointUnionSets(events.length);
+
+        let doOverlap = (event1, event2) => {
+            return (
+                event1.to.getTime() + 300000 - (event2.from.getTime() - 300000) >= 0 &&
+                event2.to.getTime() + 300000 - (event1.from.getTime() - 300000) >= 0
+            );
+        };
+
+        for (let i = 0; i < events.length - 1; i++) {
+            for (let j = i + 1; j < events.length; j++) {
+                if (doOverlap(events[i], events[j])) {
+                    set.union(i, j);
+                }
+            }
+        }
+
+        return set;
+    }
 
   getTimeInHours(date) {
     return date.getUTCHours() + date.getUTCMinutes() / 60 + date.getUTCSeconds() / 3600000;
