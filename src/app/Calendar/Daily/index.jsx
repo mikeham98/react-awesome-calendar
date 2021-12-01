@@ -101,7 +101,7 @@ export default class Daily extends React.Component {
   }
 
   getTimeInHours(date) {
-    return date.getUTCHours() + date.getUTCMinutes() / 60 + date.getUTCSeconds() / 3600000;
+    return date.getHours() + date.getMinutes() / 60 + date.getSeconds() / 3600000;
   }
 
   // handleEventWidth(eventWidthHandled, events, fromHour, toHour, currentId) {

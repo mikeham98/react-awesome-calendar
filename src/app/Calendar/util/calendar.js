@@ -5,8 +5,8 @@ let firstDayOfWeek = 0;
 let lastDayOfWeek = 6;
 
 // export const dateDiff = (start, end) => {
-//   const from = new Date(start.getUTCFullYear(), start.getUTCMonth(), start.getUTCDate());
-//   const to = new Date(end.getUTCFullYear(), end.getUTCMonth(), end.getUTCDate());
+//   const from = new Date(start.getFullYear(), start.getMonth(), start.getDate());
+//   const to = new Date(end.getFullYear(), end.getMonth(), end.getDate());
 //
 //   const timeDiff = Math.abs(from.getTime() - to.getTime());
 //   const dayDiff = timeDiff / (1000 * 3600 * 24);
@@ -20,13 +20,13 @@ let lastDayOfWeek = 6;
 // };
 
 export const dateDiff = (start, end) => {
-  const from = new Date(start.getUTCFullYear(), start.getUTCMonth(), start.getUTCDate());
-  const to = new Date(end.getUTCFullYear(), end.getUTCMonth(), end.getUTCDate());
+  const from = new Date(start.getFullYear(), start.getMonth(), start.getDate());
+  const to = new Date(end.getFullYear(), end.getMonth(), end.getDate());
 
   const timeDiff = Math.abs(from.getTime() - to.getTime());
   const dayDiff = timeDiff / (1000 * 3600 * 24);
   let value =  dayDiff + 1;
-  if (end.getUTCHours() === 0 && end.getUTCMinutes() === 0 && end.getUTCSeconds() === 0) {
+  if (end.getHours() === 0 && end.getMinutes() === 0 && end.getSeconds() === 0) {
     value -= 1;
   }
   return value;
@@ -110,7 +110,7 @@ export const formatEvents = events => {
           if (!Array.isArray(formattedEvents[fromDateAsTime])) {
             formattedEvents[fromDateAsTime] = [];
           }
-          if(from.getUTCHours() === 0 && to.getUTCHours() === 0) {
+          if(from.getHours() === 0 && to.getHours() === 0) {
             formattedEvents[fromDateAsTime].push({
               ...event,
               allDay: true,
