@@ -68,3 +68,9 @@
   width: 100%;
   color: #202029;
 }
+
+@media only screen and (max-width: 426px) {
+    .yearlyMonth {
+        width: calc(100% / 2);
+    }
+}
