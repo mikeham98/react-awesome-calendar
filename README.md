@@ -71,6 +71,7 @@ class MyComponent extends React.Component {
 |Name                   |Type         |Description                                                                                                   |
 |-----------------------|-------------|--------------------------------------------------------------------------------------------------------------|
 |events                 |array        |Events is an array that can be passed into the calendar and will render events on the Monthly and Daily view  |
+|initialMode             |string        |Set the initial mode of the calendar. Accepted values are "daily", "monthly", and "yearly"|
 |header                 |component    |This allows you to provide a custom header component for the calendar                                         |
 |onChange               |function     |This will be called every time the calendar changes date or mode                                              |
 |onClickEvent           |function     |This function is called on click of an event on the daily mode                                                |
@@ -103,7 +104,7 @@ If you wish to provide a customer header component you can pass in a prop which 
         month: numeric,
         day: numeric
     },
-    mode: "dailyMode" || "monthlyMode" || "yearlyMode" - this can be used to determine what the current mode of the calender is. This way you can choose whether to show a year, month or day depending on the mode,
+    mode: "daily" || "monthly" || "yearly",
     prev: {
         year: numeric,
         month: numeric,

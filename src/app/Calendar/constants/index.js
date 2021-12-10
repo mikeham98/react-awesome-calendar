@@ -1,6 +1,6 @@
-export const yearlyMode = 'yearlyMode';
-export const monthlyMode = 'monthlyMode';
-export const dailyMode = 'dailyMode';
+export const yearlyMode = 'yearly';
+export const monthlyMode = 'monthly';
+export const dailyMode = 'daily';
 
 export const startPosition = 'startPosition';
 export const middlePosition = 'middlePosition';

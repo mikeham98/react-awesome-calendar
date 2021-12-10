@@ -6,7 +6,7 @@ describe('calendarDetails', () => {
   let currentYear;
   let currentMonth;
   let currentDay;
-  describe('dailyMode', () => {
+  describe('daily', () => {
     beforeEach(() => {
       mode = dailyMode;
     });
@@ -55,7 +55,7 @@ describe('calendarDetails', () => {
       });
     });
   });
-  describe('monthlyMode', () => {
+  describe('monthly', () => {
     beforeEach(() => {
       mode = monthlyMode;
     });
@@ -104,7 +104,7 @@ describe('calendarDetails', () => {
       });
     });
   });
-  describe('yearlyMode', () => {
+  describe('yearly', () => {
     beforeEach(() => {
       mode = yearlyMode;
     });

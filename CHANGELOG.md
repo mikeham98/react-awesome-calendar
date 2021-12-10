@@ -1,3 +1,11 @@
+Next release
+
+Added
+- Added an `initialMode` prop to set the initial mode of the calendar (daily, monthly, yearly)
+
+Changed
+- Changed underlying value of dailyMode, monthlyMode and yearlyMode to omit "Mode" from the string e.g. now "daily" instead of "dailyMode"
+
 Release v1.0.14
 
 Fixed
